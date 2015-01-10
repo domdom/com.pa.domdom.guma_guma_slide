@@ -1,0 +1,12 @@
+{
+  "tool_type": "TOOL_BuildArm",
+  "max_range": 30,
+  "construction_demand": {
+    "energy": 0,
+    "metal": 60
+  },
+  "yaw_rate": 180,
+  "pitch_rate": 180,
+  "yaw_range": 180,
+  "pitch_range": 90
+}
