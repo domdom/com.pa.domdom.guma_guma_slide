@@ -33,8 +33,7 @@
   "command_caps": [
     "ORDER_Move",
     "ORDER_Patrol",
-    "ORDER_Repair",
-    "ORDER_Assist"
+    "ORDER_Repair"
   ],
   "transportable": {
     "size": 1
