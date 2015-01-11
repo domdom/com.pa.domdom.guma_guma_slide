@@ -2,7 +2,7 @@
   "base_spec": "/pa/units/land/base_structure/base_structure.json",
   "display_name": "!LOC(units:energy_plant.message):Energy Plant",
   "description": "!LOC(units:basic_manufacturing_produces_energy.message):Basic manufacturing- Produces energy.",
-  "max_health": 1000,
+  "max_health": 200,
   "build_metal_cost": 30,
   "atrophy_rate": 7.5,
   "atrophy_cool_down": 15.0,
