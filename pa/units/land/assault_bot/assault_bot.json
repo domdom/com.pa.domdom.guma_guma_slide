@@ -3,7 +3,7 @@
   "display_name": "Guma",
   "description": "Guma Guma Guma Guma.",
   "max_health": 1,
-  "build_metal_cost": 1.5,
+  "build_metal_cost": 3,
   "attachable": {
     "offsets": {
       "root": [

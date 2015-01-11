@@ -6,7 +6,7 @@
       "id": "/pa/units/land/assault_bot/assault_bot_ammo.json"
     }
   ],
-  "rate_of_fire": 10.0,
+  "rate_of_fire": 3,
   "idle_aim_delay": 1.0,
   "max_range": 50,
   "yaw_rate": 360,

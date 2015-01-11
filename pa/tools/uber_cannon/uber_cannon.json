@@ -8,14 +8,14 @@
   ],
   "ammo_source": "energy",
   "ammo_capacity": 1,
-  "ammo_demand": 0.05,
+  "ammo_demand": 0.03,
   "ammo_per_shot": 1,
   "max_range": 200,
   "yaw_rate": 360,
   "pitch_rate": 360,
   "yaw_range": 180,
   "pitch_range": 90,
-  "rate_of_fire": 0.05,
+  "rate_of_fire": 0.03,
   "auto_attack": true,
   "auto_task_type": "none"
 }
