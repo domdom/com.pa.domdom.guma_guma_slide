@@ -2,7 +2,7 @@
   "base_spec": "/pa/units/land/base_bot/base_bot.json",
   "display_name": "!LOC(units:combat_fabrication_bot.message):Combat Fabrication Bot",
   "description": "!LOC(units:basic_fabricator_combatant_wired_to_build_mines_and_repair_units_can_only_build_units_for_which_it_has_a_blueprint.message):Basic fabricator combatant- Wired to build mines and repair units. Can only build units for which it has a blueprint.",
-  "max_health": 3000,
+  "max_health": 100,
   "build_metal_cost": 30,
   "attachable": {
     "offsets": {
@@ -19,12 +19,12 @@
     }
   },
   "buildable_types": "CombatFabBuild",
-  "can_only_assist_with_buildable_items": true,
+  "can_only_assist_with_buildable_items": false,
   "unit_types": [
+    "UNITTYPE_Fabber",
     "UNITTYPE_Construction",
     "UNITTYPE_Bot",
     "UNITTYPE_Mobile",
-    "UNITTYPE_Offense",
     "UNITTYPE_Land",
     "UNITTYPE_Basic",
     "UNITTYPE_FactoryBuild",
