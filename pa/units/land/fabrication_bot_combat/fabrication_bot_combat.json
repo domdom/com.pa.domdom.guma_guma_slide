@@ -1,7 +1,7 @@
 {
   "base_spec": "/pa/units/land/base_bot/base_bot.json",
-  "display_name": "!LOC(units:combat_fabrication_bot.message):Combat Fabrication Bot",
-  "description": "!LOC(units:basic_fabricator_combatant_wired_to_build_mines_and_repair_units_can_only_build_units_for_which_it_has_a_blueprint.message):Basic fabricator combatant- Wired to build mines and repair units. Can only build units for which it has a blueprint.",
+  "display_name": "Honey Flower",
+  "description": "Heal your Kuma with Honey!",
   "max_health": 100,
   "build_metal_cost": 30,
   "attachable": {
