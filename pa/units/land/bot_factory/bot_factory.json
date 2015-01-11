@@ -2,7 +2,7 @@
   "base_spec": "/pa/units/land/base_structure/base_structure.json",
   "display_name": "!LOC(units:bot_factory.message):Bot Factory",
   "description": "!LOC(units:basic_manufacturing_builds_bots.message):Basic manufacturing- Builds bots.",
-  "max_health": 6000,
+  "max_health": 1000,
   "build_metal_cost": 40,
   "atrophy_rate": 10.0,
   "atrophy_cool_down": 15.0,

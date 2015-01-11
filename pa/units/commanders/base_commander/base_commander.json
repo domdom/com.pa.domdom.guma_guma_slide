@@ -3,7 +3,7 @@
   "description": "Base Commander Description - If you're seeing this, something is wrong in your commander.",
   "si_name": "commander",
   "strategic_icon_priority": 0,
-  "max_health": 20000,
+  "max_health": 400,
   "build_metal_cost": 120,
   "buildable_types": "CmdBuild",
   "show_in_orbital_layer": true,
@@ -23,12 +23,12 @@
     }
   },
   "production": {
-    "energy": 4,
+    "energy": 2,
     "metal": 1000
   },
   "storage": {
-    "energy": 10,
-    "metal": 10
+    "energy": 15,
+    "metal": 1000
   },
   "unit_types": [
     "UNITTYPE_Commander",

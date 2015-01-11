@@ -2,14 +2,14 @@
   "base_spec": "/pa/units/land/base_structure/base_structure.json",
   "display_name": "!LOC(units:energy_plant.message):Energy Plant",
   "description": "!LOC(units:basic_manufacturing_produces_energy.message):Basic manufacturing- Produces energy.",
-  "max_health": 3000,
+  "max_health": 1000,
   "build_metal_cost": 30,
   "atrophy_rate": 7.5,
   "atrophy_cool_down": 15.0,
   "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
   "area_build_type": "Line",
   "production": {
-    "energy": 3
+    "energy": 1
   },
   "unit_types": [
     "UNITTYPE_Structure",
