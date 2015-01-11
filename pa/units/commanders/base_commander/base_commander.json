@@ -24,11 +24,11 @@
   },
   "production": {
     "energy": 2,
-    "metal": 1000
+    "metal": 100
   },
   "storage": {
     "energy": 15,
-    "metal": 1000
+    "metal": 100
   },
   "unit_types": [
     "UNITTYPE_Commander",
