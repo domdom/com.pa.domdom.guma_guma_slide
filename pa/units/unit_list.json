@@ -51,6 +51,7 @@
     "/pa/units/land/bot_factory/bot_factory.json",
     "/pa/units/land/fabrication_bot_combat/fabrication_bot_combat.json",
     "/pa/units/land/radar/radar.json",
-	"/pa/units/land/energy_plant/energy_plant.json"
+	"/pa/units/land/energy_plant/energy_plant.json",
+	"/pa/units/land/metal_extractor/metal_extractor.json"
   ]
 }
