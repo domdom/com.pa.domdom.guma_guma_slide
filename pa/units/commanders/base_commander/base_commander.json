@@ -130,12 +130,6 @@
 		"bone": "bone_root",
 		"offset": [0, 0, 0.0],
 		"orientation": [0, 0, 0]
-	}, {
-		"type": "idle",
-		"filename": "/pa/units/commanders/base_commander/base_bullet_proj_rainbow.pfx",
-		"bone": "bone_turret",
-		"offset": [0, 0, 0.0],
-		"orientation": [0, 0, 0]
 	}
   ],
   "audio": {
