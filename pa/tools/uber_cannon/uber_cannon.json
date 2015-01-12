@@ -6,6 +6,7 @@
     "WL_WaterSurface",
     "WL_Air"
   ],
+  "idle_aim_delay": 0,
   "ammo_source": "energy",
   "ammo_capacity": 1,
   "ammo_demand": 0.03,
