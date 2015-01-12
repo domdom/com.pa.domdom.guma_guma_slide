@@ -124,7 +124,13 @@
       "type": "build",
       "filename": "/pa/effects/specs/fab_spray.pfx",
       "bone": "socket_leftMuzzle"
-    }
+    }, {
+		"type": "idle",
+		"filename": "/pa/units/commanders/base_commander/shield.pfx",
+		"bone": "bone_root",
+		"offset": [0, 0, 0.0],
+		"orientation": [0, 0, 0]
+	}
   ],
   "audio": {
     "loops": {
