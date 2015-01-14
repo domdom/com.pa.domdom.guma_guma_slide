@@ -23,7 +23,7 @@
     }
   },
   "production": {
-    "energy": 3,
+    "energy": 2,
     "metal": 2
   },
   "storage": {
