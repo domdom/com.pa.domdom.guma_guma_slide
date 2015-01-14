@@ -11,7 +11,7 @@
   },
   "model": null,
   "fx_trail": {
-    "filename": "/pa/effects/specs/laser_blast_proj_trail.pfx",
+    "filename": "/pa/units/land/assault_bot/laser_trail.pfx",
     "offset": [
       0.0,
       0.0,
