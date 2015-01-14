@@ -4,7 +4,7 @@
   "turn_rate": 180,
   "damage": 20,
   "splash_damage": 1,
-  "splash_radius": 2,
+  "splash_radius": 3,
   "initial_velocity": 200.0,
   "max_velocity": 200.0,
   "lifetime": 2,
