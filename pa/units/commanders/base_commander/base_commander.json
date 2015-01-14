@@ -95,9 +95,9 @@
       "secondary_weapon": true
     },
     {
-      "spec_id": "/pa/units/commanders/base_commander/base_commander_tool_aa_weapon.json",
+      "spec_id": "/pa/units/commanders/base_commander/base_commander_anti_guma_shield.json",
       "aim_bone": "bone_turret",
-      "muzzle_bone": "socket_rightMuzzle",
+      "muzzle_bone": "bone_root",
       "primary_weapon": false,
       "show_range": false
     },
