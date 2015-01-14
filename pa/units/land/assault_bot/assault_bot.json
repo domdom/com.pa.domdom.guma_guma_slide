@@ -31,6 +31,7 @@
     "size": 1
   },
   "guard_layer": "WL_AnySurface",
+  "command_caps":["ORDER_Move","ORDER_Attack","ORDER_Assist"],
   "navigation": {
     "type": "amphibious",
     "acceleration": 300,
