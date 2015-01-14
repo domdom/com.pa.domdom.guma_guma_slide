@@ -7,7 +7,7 @@
   "max_velocity": 100.0,
   "lifetime": 1,
   "physics" : {
-    "gravity_scalar" : 0.1
+    "gravity_scalar" : 0.5
   },
   "model": null,
   "fx_trail": {
