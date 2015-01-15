@@ -1,6 +1,6 @@
 {
   "tool_type": "TOOL_Weapon",
-  "ammo_id": "/pa/ammo/cannon_uber/cannon_uber.json",
+  "ammo_id": "/pa/units/commanders/base_commander/love_bullet.json",
   "target_layers": [
     "WL_LandHorizontal",
     "WL_WaterSurface",
@@ -12,12 +12,13 @@
   "ammo_demand": 1,
   "ammo_per_shot": 0,
   "max_range": 200,
-  "yaw_rate": 360,
-  "pitch_rate": 360,
-  "yaw_range": 180,
-  "pitch_range": 90,
+  "yaw_rate": 0,
+  "pitch_rate": 0,
+  "yaw_range": 0,
+  "pitch_range": 0,
   "firing_arc_yaw": 360,
   "firing_arc_pitch": 360,
-  "rate_of_fire": 1,
-  "auto_attack": false
+  "auto_attack": true,
+  "spread_fire": true,
+  "rate_of_fire": 1
 }

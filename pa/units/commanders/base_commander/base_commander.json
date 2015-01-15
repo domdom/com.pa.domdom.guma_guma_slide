@@ -89,9 +89,8 @@
       "primary_weapon": true
     },
     {
-      "spec_id": "/pa/tools/uber_cannon/uber_cannon.json",
-      "aim_bone": "bone_turret",
-      "muzzle_bone": "socket_rightMuzzle",
+      "spec_id": "/pa/units/commanders/love_bullet_weapon.json",
+      "aim_bone": "bone_root",
       "secondary_weapon": true
     }
   ],
@@ -118,7 +117,7 @@
 		"orientation": [0, 0, 0]
 	}, {
 		"type": "idle",
-		"filename": "/pa/units/commanders/base_commander/base_bullet_proj_rainbow.pfx",
+		"filename": "/pa/units/commanders/base_commander/rainbow_trail.pfx",
 		"bone": "bone_root",
 		"offset": [0, 0, 4],
 		"orientation": [0, 0, 0]
