@@ -17,7 +17,7 @@
     "filename": ""
   },
   "fx_trail": {
-    "filename": "/pa/units/commanders/base_commander/base_commander_bullet_effect.pfx",
+    "filename": "/pa/units/commanders/base_commander/base_commander_bullet_trail_effect.pfx",
     "offset": [
       0.0,
       0.0,
