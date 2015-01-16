@@ -20,7 +20,7 @@
   "events": {
     "died": {
       "audio_cue": "/SE/Impacts/cannon_uber",
-      "effect_spec": "/pa/effects/specs/uber_proj_explosion.pfx"
+      "effect_spec": "/pa/effects/specs/default_commander_landing.pfx"
     }
   },
   "flight_type": "Seeking",
