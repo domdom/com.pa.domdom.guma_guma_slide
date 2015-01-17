@@ -14,7 +14,7 @@
         }
     }, 
     "base_spec": "/pa/units/commanders/imperial_base/imperial_base.json", 
-    "description": "Student Council President", 
+    "description": "Student", 
     "display_name": "Kuma", 
     "headlights": [
         {
@@ -54,8 +54,8 @@
             "intensity": 5.0, 
             "offset": [
                 0, 
-                -1.607, 
-                2.494
+                -0.807, 
+                3.704
             ], 
             "radius": 2.0
         }, 
@@ -81,6 +81,6 @@
         12.4193
     ], 
     "model": {
-        "filename": "/pa/units/commanders/imperial_able/imperial_able.papa"
+        "filename": "/pa/units/commanders/imperial_thechessknight/imperial_thechessknight.papa"
     }
 }

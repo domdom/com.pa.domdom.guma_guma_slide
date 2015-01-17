@@ -4,7 +4,7 @@
             "head": [
                 0, 
                 0, 
-                12.0
+                12.2
             ], 
             "root": [
                 0, 
@@ -14,7 +14,7 @@
         }
     }, 
     "base_spec": "/pa/units/commanders/imperial_base/imperial_base.json", 
-    "description": "Student Council President", 
+    "description": "Student", 
     "display_name": "Kuma", 
     "headlights": [
         {
@@ -31,9 +31,9 @@
             "near_height": 5.0, 
             "near_width": 5.0, 
             "offset": [
-                0, 
-                -1.607, 
-                2.494
+                0.0, 
+                -1.7, 
+                1.9
             ], 
             "orientation": [
                 0.0, 
@@ -53,9 +53,9 @@
             ], 
             "intensity": 5.0, 
             "offset": [
-                0, 
-                -1.607, 
-                2.494
+                0.0, 
+                -1.41, 
+                2.47
             ], 
             "radius": 2.0
         }, 
@@ -75,12 +75,7 @@
             "radius": 4.0
         }
     ], 
-    "mesh_bounds": [
-        10.3, 
-        6.5, 
-        12.4193
-    ], 
     "model": {
-        "filename": "/pa/units/commanders/imperial_able/imperial_able.papa"
+        "filename": "/pa/units/commanders/imperial_kapowaz/imperial_kapowaz.papa"
     }
 }

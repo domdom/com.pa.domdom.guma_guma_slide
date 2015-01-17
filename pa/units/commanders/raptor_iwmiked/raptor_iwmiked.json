@@ -3,8 +3,8 @@
         "offsets": {
             "head": [
                 0, 
-                0, 
-                12.0
+                -0.5, 
+                10.6
             ], 
             "root": [
                 0, 
@@ -13,8 +13,8 @@
             ]
         }
     }, 
-    "base_spec": "/pa/units/commanders/imperial_base/imperial_base.json", 
-    "description": "Student Council President", 
+    "base_spec": "/pa/units/commanders/raptor_base/raptor_base.json", 
+    "description": "Student", 
     "display_name": "Kuma", 
     "headlights": [
         {
@@ -32,8 +32,8 @@
             "near_width": 5.0, 
             "offset": [
                 0, 
-                -1.607, 
-                2.494
+                -2.149, 
+                1.488
             ], 
             "orientation": [
                 0.0, 
@@ -54,13 +54,13 @@
             "intensity": 5.0, 
             "offset": [
                 0, 
-                -1.607, 
-                2.494
+                -3.66, 
+                1.798
             ], 
             "radius": 2.0
         }, 
         {
-            "bone": "bone_leftElbow", 
+            "bone": "bone_leftShoulder", 
             "color": [
                 0.4, 
                 1.0, 
@@ -68,19 +68,19 @@
             ], 
             "intensity": 2.0, 
             "offset": [
-                0.07, 
-                -3.85, 
-                0.2
+                0.4, 
+                3.46, 
+                -1.1
             ], 
             "radius": 4.0
         }
     ], 
     "mesh_bounds": [
-        10.3, 
-        6.5, 
-        12.4193
+        10.5, 
+        9.2, 
+        13.0
     ], 
     "model": {
-        "filename": "/pa/units/commanders/imperial_able/imperial_able.papa"
+        "filename": "/pa/units/commanders/raptor_iwmiked/raptor_iwmiked.papa"
     }
 }
