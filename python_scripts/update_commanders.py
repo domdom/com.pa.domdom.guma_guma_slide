@@ -39,4 +39,4 @@ for unit in unit_list['units']:
         comm.pop('tools', None)
         comm['display_name'] = display_name
         comm['description'] = description
-        print json.dump(pa_comm, open(), indent=4, sort_keys=True)
+        json.dump(comm, open(mod_comm, 'w'), indent=4, sort_keys=True)
