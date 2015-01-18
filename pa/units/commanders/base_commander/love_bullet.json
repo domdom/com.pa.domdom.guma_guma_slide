@@ -7,15 +7,13 @@
   "burn_damage": 1,
   "burn_radius": 15,
   "armor_damage_map": {
-    "AT_Structure": 0.25,
-    "AT_Commander": 0.25
+    "AT_Commander": 100
   },
   "cruise_height": 30,
   "initial_velocity": 300.0,
   "max_velocity": 300.0,
   "turn_rate": 200,
   "lifetime": 15,
-  "max_health": 1,
   "influence_radius": 200,
   "fx_trail": {
     "filename": "/pa/effects/specs/uber_proj_trail.pfx",
@@ -36,7 +34,7 @@
     "radius": 1,
     "gravity_scalar": 5,
     "ignore_gravity": true,
-    "add_to_spatial_db": true
+    "add_to_spatial_db": false
   },
   "flight_type": "Staged",
   "stages": [

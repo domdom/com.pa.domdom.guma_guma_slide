@@ -4,7 +4,7 @@
   "ammo_source": "energy",
   "ammo_capacity": 1,
   "ammo_demand": 0.03,
-  "ammo_per_shot": 0,
+  "ammo_per_shot": 1,
   "max_range": 200,
   "yaw_rate": 2000,
   "pitch_rate": 2000,
@@ -15,7 +15,7 @@
   "auto_attack": false,
   "spread_fire": true,
   "manual_fire" : true,
-  "rate_of_fire": 1,
+  "rate_of_fire": 0.03,
   "target_layers": [
     "WL_LandHorizontal",
     "WL_WaterSurface"
