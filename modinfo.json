@@ -3,17 +3,17 @@
     "context" : "server",
     "identifier" : "com.pa.domdom.guma_guma_slide",
     "display_name" : "Guma Guma Slide",
-    "description" : "Some time ago, the asteroid Kumaria exploded in the depths of space.\nThe resulting fragments became a meteor shower that rained down on Earth, and for some reason, bears all over the world rose up and attacked humanity! In \"Man vs. Bear,\" the bears ate the humans and the humans shot the bears, resulting in a seemingly unending battle and a cycle of hatred. In the end, a giant \"Wall of Extinction\" was erected between the humans and bears and a state of mutual nonaggression came to pass...\nThe human world.\nOne morning, Arashigaoka Academy students Kureha Tsubaki and Sumika Izumino were by themselves and saw the \"Yuri Flower\" that bloomed in a flower bed. The two are friends as well as lovers. The flower bed is an important place to the two. At that moment, the Bear Alarms ring out! The bears are invading the human world, and humans are being attacked! Are they really those bears? One mystery invokes yet another mystery, one after another. The curtain rises magnificently on Yuri Kuma Arashi!",
+    "description" : "A fast paced custom game bringing PA to life with rainbows and beams of love!",
     "author" : "Yuri Bros",
     "version" : "1.2.1",
 	"build": "76557",
-    "date": "2015/01/15",
+    "date": "2015/01/18",
     "signature": "not yet implemented",
     "forum": "https://forums.uberent.com/threads/rel-guma-guma-slide.67174/",
     "category": [
         "server-mod",
-		"units",
-		"game-mode"
+	"units",
+	"game-mode"
     ],
     "id": "a",
     "icon": "http://i.imgur.com/Ru0njgV.jpg",
