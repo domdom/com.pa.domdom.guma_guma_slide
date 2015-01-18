@@ -1,0 +1,2356 @@
+{
+  "effects": [
+    {
+      "name": "particle_transparent",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "standard",
+          "vertex": "particle_quad_basic.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "color",
+          "vertex": "particle_quad_color.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "alpha",
+          "vertex": "particle_quad_alpha.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "velocity",
+          "vertex": "particle_quad_velocity.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_velocity_color.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorFlipbook",
+          "vertex": "particle_quad_color_flip.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "string",
+          "vertex": "particle_string.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "repeat",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_transparent_soft",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "color",
+          "vertex": "particle_quad_color_soft.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "velocity",
+          "vertex": "particle_quad_velocity_soft.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_velocity_color_soft.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorFlipbook",
+          "vertex": "particle_quad_color_flip_soft.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_transparent_lit",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "color",
+          "vertex": "particle_quad_color_lit.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_velocity_color_lit.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorFlipbook",
+          "vertex": "particle_quad_color_flip_lit.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "string",
+          "vertex": "particle_string_lit.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "repeat",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_transparent_nohdr",
+      "lit": false,
+      "hdr": false,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "standard",
+          "vertex": "particle_quad_basic.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "alpha",
+          "vertex": "particle_quad_alpha.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "color",
+          "vertex": "particle_quad_color.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_velocity_color.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorFlipbook",
+          "vertex": "particle_quad_color_flip.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "string",
+          "vertex": "particle_string.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "repeat",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "icon",
+          "vertex": "particle_icon.vs",
+          "pixel": "particle_icon.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": false,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "direct",
+          "vertex": "particle_direct.vs",
+          "pixel": "textured_unlit_bgra.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "one",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "status",
+          "vertex": "particle_status_icon.vs",
+          "pixel": "particle_status_icon.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": false,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_transparent_screensize_nohdr",
+      "lit": false,
+      "hdr": false,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "standard",
+          "vertex": "particle_quad_screensize.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "color",
+          "vertex": "particle_quad_screensize_color.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_screensize_velocity_color.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_number_transparent_screensize_nohdr",
+      "lit": false,
+      "hdr": false,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "color",
+          "vertex": "particle_number_screensize.vs",
+          "pixel": "particle_number.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_add",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "standard",
+          "vertex": "particle_quad_basic.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "color",
+          "vertex": "particle_quad_color.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "alpha",
+          "vertex": "particle_quad_alpha.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "velocity",
+          "vertex": "particle_quad_velocity.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_velocity_color.vs",
+          "pixel": "textured_unlit.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_add_soft",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "color",
+          "vertex": "particle_quad_color_soft.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "velocity",
+          "vertex": "particle_quad_velocity_soft.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_velocity_color_soft.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorFlipbook",
+          "vertex": "particle_quad_color_flip_soft.vs",
+          "pixel": "particle_soft.fs",
+          "wrap": [
+            {
+              "texture": "Texture",
+              "u": "clamp",
+              "v": "clamp",
+              "w": "clamp"
+            }
+          ],
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_add_nohdr",
+      "lit": false,
+      "hdr": false,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "standard",
+          "vertex": "particle_quad_basic.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "color",
+          "vertex": "particle_quad_color.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "alpha",
+          "vertex": "particle_quad_alpha.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "velocity",
+          "vertex": "particle_quad_velocity.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_velocity_color.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_transparent_ramp",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "standard",
+          "vertex": "particle_quad_ramp_basic.vs",
+          "pixel": "particle.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "color",
+          "vertex": "particle_quad_ramp_color.vs",
+          "pixel": "particle.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "velocity",
+          "vertex": "particle_quad_ramp_velocity.vs",
+          "pixel": "particle.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_ramp_velocity_color.vs",
+          "pixel": "particle.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_add_ramp",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "standard",
+          "vertex": "particle_quad_ramp_basic.vs",
+          "pixel": "particle.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "color",
+          "vertex": "particle_quad_ramp_color.vs",
+          "pixel": "particle.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "velocity",
+          "vertex": "particle_quad_ramp_velocity.vs",
+          "pixel": "particle.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_ramp_velocity_color.vs",
+          "pixel": "particle.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_transparent_distort",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle.vs",
+          "pixel": "particle_distort.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_add_distort",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle.vs",
+          "pixel": "particle_distort.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_clip",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_color.vs",
+          "pixel": "particle_clip.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "standard",
+          "vertex": "particle_quad_basic.vs",
+          "pixel": "particle_clip.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "color",
+          "vertex": "particle_quad_color.vs",
+          "pixel": "particle_clip.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "alpha",
+          "vertex": "particle_quad_alpha.vs",
+          "pixel": "particle_clip.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "velocity",
+          "vertex": "particle_quad_velocity.vs",
+          "pixel": "particle_clip.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorvelocity",
+          "vertex": "particle_quad_velocity_color.vs",
+          "pixel": "particle_clip.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "colorFlipbook",
+          "vertex": "particle_quad_color_flip.vs",
+          "pixel": "particle_clip.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        },
+        {
+          "name": "string",
+          "vertex": "particle_string.vs",
+          "pixel": "particle_clip.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": false,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh.vs",
+          "pixel": "prelight_flat.fs"
+        },
+        {
+          "name": "Prelight",
+          "vertex": "particle_mesh.vs",
+          "pixel": "prelight_flat.fs"
+        },
+        {
+          "name": "ShadowMap",
+          "vertex": "particle_mesh_shadow.vs",
+          "pixel": "shadowmap.fs",
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_normal",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": false,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_normal.vs",
+          "pixel": "prelight_normal.fs"
+        },
+        {
+          "name": "Prelight",
+          "vertex": "particle_mesh_normal.vs",
+          "pixel": "prelight_normal.fs"
+        },
+        {
+          "name": "ShadowMap",
+          "vertex": "particle_mesh_shadow.vs",
+          "pixel": "shadowmap.fs",
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_unit",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": false,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh.vs",
+          "pixel": "prelight_pa_unit.fs"
+        },
+        {
+          "name": "Prelight",
+          "vertex": "particle_mesh.vs",
+          "pixel": "prelight_pa_unit.fs"
+        },
+        {
+          "name": "ShadowMap",
+          "vertex": "particle_mesh_shadow.vs",
+          "pixel": "shadowmap.fs",
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_clip_smoke",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": false,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_clip_smoke.vs",
+          "pixel": "prelight_particle_mesh_clip_smoke.fs"
+        },
+        {
+          "name": "Prelight",
+          "vertex": "particle_mesh_clip_smoke.vs",
+          "pixel": "prelight_particle_mesh_clip_smoke.fs"
+        },
+        {
+          "name": "ShadowMap",
+          "vertex": "particle_mesh_clip_smoke_shadow.vs",
+          "pixel": "shadowmap_particle_mesh_clip_smoke.fs",
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_clip_smoke_bend",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": false,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_clip_smoke_bend.vs",
+          "pixel": "prelight_particle_mesh_clip_smoke.fs"
+        },
+        {
+          "name": "Prelight",
+          "vertex": "particle_mesh_clip_smoke_bend.vs",
+          "pixel": "prelight_particle_mesh_clip_smoke.fs"
+        },
+        {
+          "name": "ShadowMap",
+          "vertex": "particle_mesh_clip_smoke_bend_shadow.vs",
+          "pixel": "shadowmap_particle_mesh_clip_smoke.fs",
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_color",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": false,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_color.vs",
+          "pixel": "prelight_particle_mesh_color.fs"
+        },
+        {
+          "name": "Prelight",
+          "vertex": "particle_mesh_color.vs",
+          "pixel": "prelight_particle_mesh_color.fs"
+        },
+        {
+          "name": "ShadowMap",
+          "vertex": "particle_mesh_shadow.vs",
+          "pixel": "shadowmap.fs",
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_transparent",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_color.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_add",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_color.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_fresnel_ramp",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_color.vs",
+          "pixel": "particle_mesh_fresnel_ramp.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_fresnel_ramp_add",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_color.vs",
+          "pixel": "particle_mesh_fresnel_ramp.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "back",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_ring_wave",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_ring_wave.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_ring_wave_add",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_ring_wave.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "one",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_shock_wave",
+      "lit": false,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_color.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "meshParticle_fog_transparent",
+      "lit": true,
+      "hdr": true,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "Default",
+          "vertex": "particle_mesh_fog.vs",
+          "pixel": "particle_mesh_fog.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": false,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "front",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_line_transparent_nohdr",
+      "lit": false,
+      "hdr": false,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "string",
+          "vertex": "particle_line.vs",
+          "pixel": "textured_unlit.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "particle_line_arrow_transparent_nohdr",
+      "lit": false,
+      "hdr": false,
+      "virtual_textured": false,
+      "transparent": true,
+      "techniques": [
+        {
+          "name": "string",
+          "vertex": "particle_line.vs",
+          "pixel": "particle_line_arrow.fs",
+          "blend": {
+            "enabled": true,
+            "source": "src_alpha",
+            "dest": "inv_src_alpha",
+            "op": "add"
+          },
+          "depth": {
+            "write": false,
+            "read": true,
+            "compare": "less"
+          },
+          "rast": {
+            "cullmode": "none",
+            "solid": true,
+            "write_red": true,
+            "write_green": true,
+            "write_blue": true,
+            "write_alpha": true
+          }
+        }
+      ]
+    }
+  ]
+}

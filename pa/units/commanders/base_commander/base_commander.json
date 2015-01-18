@@ -83,15 +83,14 @@
       "aim_bone": "bone_turret"
     },
     {
-      "spec_id": "/pa/units/commanders/base_commander/base_commander_tool_bullet_weapon.json",
+      "spec_id": "/pa/units/commanders/base_commander/base_commander_bullet_weapon.json",
       "aim_bone": "bone_turret",
       "muzzle_bone": "socket_rightMuzzle",
       "primary_weapon": true
     },
     {
-      "spec_id": "/pa/tools/uber_cannon/uber_cannon.json",
+      "spec_id": "/pa/units/commanders/base_commander/love_bullet_weapon.json",
       "aim_bone": "bone_turret",
-      "muzzle_bone": "socket_rightMuzzle",
       "secondary_weapon": true
     }
   ],
@@ -111,18 +110,18 @@
       "filename": "/pa/effects/specs/fab_spray.pfx",
       "bone": "socket_leftMuzzle"
     }, {
-		"type": "idle",
-		"filename": "/pa/units/commanders/base_commander/shield.pfx",
-		"bone": "bone_root",
-		"offset": [0, 0, 0.0],
-		"orientation": [0, 0, 0]
-	}, {
-		"type": "idle",
-		"filename": "/pa/units/commanders/base_commander/base_bullet_proj_rainbow.pfx",
-		"bone": "bone_root",
-		"offset": [0, 0, 4],
-		"orientation": [0, 0, 0]
-	}
+        "type": "idle",
+        "filename": "/pa/units/commanders/base_commander/shield.pfx",
+        "bone": "bone_root",
+        "offset": [0, 0, 0.0],
+        "orientation": [0, 0, 0]
+    }, {
+        "type": "moving",
+        "filename": "/pa/units/commanders/base_commander/rainbow_trail.pfx",
+        "bone": "bone_root",
+        "offset": [0, 0, 4],
+        "orientation": [0, 0, 0]
+    }
   ],
   "audio": {
     "loops": {

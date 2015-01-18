@@ -1,6 +1,10 @@
 {
   "base_spec": "/pa/ammo/base_bullet/base_bullet.json",
-  "flight_type": "Ballistic",
+  "damage": 5,
+  "splash_damage": 0,
+  "splash_radius": 0,
+  "lifetime": 2,
+  "flight_type": "Seeking",
   "turn_rate": 180,
   "damage": 20,
   "splash_damage": 1,
@@ -8,7 +12,24 @@
   "initial_velocity": 200.0,
   "max_velocity": 200.0,
   "lifetime": 2,
+
+  "model": {
+    "filename": ""
+  },
+  "fx_trail": {
+    "filename": "/pa/units/commanders/base_commander/base_commander_bullet_trail_effect.pfx",
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+
   "events": {
+    "died": {
+      "audio_cue": "/SE/Impacts/shell_bullet",
+      "effect_spec": "/pa/effects/specs/default_proj_explosion.pfx"
+    },
     "spawned": {
       "audio_cue": "/SE/Weapons/commander/Commander_gun_fire"
     }
