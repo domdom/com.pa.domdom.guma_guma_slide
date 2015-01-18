@@ -14,8 +14,12 @@ unit_list_path = "C:\Games\Uber Entertainment\Planetary Annihilation Launcher\Pl
 unit_list = json.load(open(unit_list_path))
 
 for unit in unit_list['units']:
+    # skip the units which are not commanders
     if '/pa/units/commanders/' not in unit: continue
+    # skip avatar commander
     if '/avatar/' in unit: continue
+    # make sure we don't overwrite our special base_commander
+    if 'base_commander' in unit: continue
 
     # check if we have that commander already
     # by trying to get it's custom name and description

@@ -1,0 +1,12 @@
+{
+  "recon": {
+    "observable": {
+      "layer": "surface_and_air",
+      "sphere_radius": 15
+    }
+  },
+  "spawn_response": {
+    "audio_cue": "/SE/Movement/commander/Commander_game_start_landing",
+    "effect_spec": "/pa/effects/specs/rainbow_commander_landing.pfx"
+  }
+}

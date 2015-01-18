@@ -10,3 +10,9 @@ Some time ago, the asteroid Kumaria exploded in the depths of space.
 The resulting fragments became a meteor shower that rained down on Earth, and for some reason, bears all over the world rose up and attacked humanity! In "Man vs. Bear", the bears ate the humans and the humans shot the bears, resulting in a seemingly unending battle and a cycle of hatred. In the end, a giant "Wall of Extinction" was erected between the humans and bears and a state of mutual nonaggression came to pass...
 
 Now the Kuma fight to control the essence of yuri love! May your trail shine brightest, and may true love guide you!
+##Mod Details
+###Guma Guma Slide Units
+
+####Guma
+Guma Guma Guma Guma.
+
