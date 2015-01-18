@@ -1,25 +1,21 @@
 {
-  "tool_type": "TOOL_Weapon",
+  "base_spec": "/pa/tools/base_missile_turret/base_missile_turret.json",
   "ammo_id": "/pa/units/commanders/base_commander/love_bullet.json",
-  "target_layers": [
-    "WL_LandHorizontal",
-    "WL_WaterSurface",
-    "WL_Air"
-  ],
-  "idle_aim_delay": 0,
   "ammo_source": "energy",
   "ammo_capacity": 1,
   "ammo_demand": 1,
-  "ammo_per_shot": 0,
+  "ammo_per_shot": 1,
   "max_range": 200,
-  "yaw_rate": 720,
-  "pitch_rate": 0,
+  "yaw_rate": 2000,
+  "pitch_rate": 2000,
   "yaw_range": 360,
-  "pitch_range": 0,
+  "pitch_range": 360,
   "firing_arc_yaw": 360,
   "firing_arc_pitch": 360,
   "auto_attack": true,
   "spread_fire": true,
-  "manual_fire" : true,
-  "rate_of_fire": 1
+  "target_layers": [
+    "WL_LandHorizontal",
+    "WL_WaterSurface"
+  ]
 }

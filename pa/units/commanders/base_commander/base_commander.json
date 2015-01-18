@@ -91,7 +91,6 @@
     {
       "spec_id": "/pa/units/commanders/base_commander/love_bullet_weapon.json",
       "aim_bone": "bone_turret",
-      "muzzle_bone": "socket_rightMuzzle",
       "secondary_weapon": true
     }
   ],
