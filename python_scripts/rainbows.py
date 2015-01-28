@@ -1,26 +1,24 @@
 import colorsys
 
-lifetime = 3
-
-c = 40
-revs = 3
-scale = 10
-time = 1
-
-for dt in [0.0, 0.33, 0.5]:
+def rainbow(steps, offset=0, revolutions=1, scale=1, time=1):
     r = []
     g = []
     b = []
-    for i in xrange(c+1):
-        v = revs * float(i) / c
+    
+    str = ''
+    for i in xrange(steps):
+        v = revolutions * float(i) / steps
         
-        rgb = colorsys.hsv_to_rgb(v + dt, 1, 1)
+        rgb = colorsys.hsv_to_rgb(v + offset, 1, 1)
         
-        r.append([time * float(i)/c, rgb[0] * scale])
-        g.append([time * float(i)/c, rgb[1] * scale])
-        b.append([time * float(i)/c, rgb[2] * scale + 20])
+        r.append([time * float(i)/steps, rgb[0] * scale])
+        g.append([time * float(i)/steps, rgb[1] * scale])
+        b.append([time * float(i)/steps, rgb[2] * scale])
 
-    print '"red" : [' + ','.join(['[' + ','.join(["%.2f" % x for x in y]) + ']' for y in r]) + '],'
-    print '"green" : [' + ','.join(['[' + ','.join(["%.2f" % x for x in y]) + ']' for y in g]) + '],'
-    print '"blue" : [' + ','.join(['[' + ','.join(["%.2f" % x for x in y]) + ']' for y in b]) + '],'
-    print ''
+    str += '{\n'
+    str += '"red" : [' + ','.join(['[' + ','.join(["%.2f" % x for x in y]) + ']' for y in r]) + '],\n'
+    str += '"green" : [' + ','.join(['[' + ','.join(["%.2f" % x for x in y]) + ']' for y in g]) + '],\n'
+    str += '"blue" : [' + ','.join(['[' + ','.join(["%.2f" % x for x in y]) + ']' for y in b]) + ']\n'
+    str += '}'
+    
+    return str
