@@ -21,6 +21,11 @@ def data_dir():
 def build():
     return "Unknown"
 
+def mod_dir():
+    path = os.path.dirname(__file__)
+    print path
+    
+
 def pa_dir():
     log_dir = os.path.join(data_dir(), 'log/')
     for f in os.listdir(log_dir):
@@ -30,21 +35,38 @@ def pa_dir():
             for line in log:
                 m = re.search(r'INFO Coherent host dir: "([^"]*)"', line)
                 if m:
-                    return os.path.normpath(os.path.join(m.group(1), '../../media'))
+                    if platform.system() == 'Windows':
+                        return os.path.normpath(os.path.join(m.group(1), '../../media'))
+                    if platform.system() == 'Linux':
+                        return os.path.normpath(os.path.join(m.group(1), '../../media'))
+                    if platform.system() == 'Darwin':
+                        return os.path.normpath(os.path.join(m.group(1), '../../Resources/media'))
 
 
-print pa_dir()
+
+mod_dir()
 
 # loads a json file from the pa media directory
 def load_base_json(path):
     if path[0] == '/':
         path = path[1:]
-    return json.load(open(os.path.join(pa_dir(), path)), object_pairs_hook=collections.OrderedDict)
+    path = os.path.join(pa_dir(), path)
+    
+    if os.path.exists(path):
+        return json.load(open(path), object_pairs_hook=collections.OrderedDict)
+    else: 
+        return None
 
 def load_mod_json(path):
     if path[0] == '/':
         path = path[1:]
+    
+    path = os.path.join(pa_dir(), path)
+        
+    if os.path.exists(path):
+        return json.load(open(path), object_pairs_hook=collections.OrderedDict)
+    else: 
+        return None
 
-print load_base_json('/pa/units/unit_list.json')
 
 
