@@ -7,6 +7,6 @@
   },
   "spawn_response": {
     "audio_cue": "/SE/Movement/commander/Commander_game_start_landing",
-    "effect_spec": "/pa/effects/specs/rainbow_commander_landing.pfx"
+    "effect_spec": "/python_scripts/gen_rainbow_commander_landing.pfx"
   }
 }
