@@ -22,3 +22,7 @@ def rainbow(steps, offset=0, revolutions=1, scale=1, time=1):
     str += '}'
     
     return str
+
+
+def rgb_from_hsv(v):
+    return colorsys.hsv_to_rgb(v, 1, 1)
