@@ -46,6 +46,7 @@ def pa_dir():
                         return os.path.normpath(os.path.join(m.group(1), '../../Resources/media'))
 
 
+
 # loads a json file from the pa media directory
 def load_base_json(path):
     if path[0] == '/':
@@ -68,7 +69,10 @@ def load_mod_json(path):
     else: 
         return None
 
-print load_base_json('/pa/units/unit_list.json')
-print load_mod_json('/pa/units/unit_list.json')
+def load_local_json(path):    
+    if os.path.exists(path):
+        return json.load(open(path), object_pairs_hook=collections.OrderedDict)
+    else: 
+        return None
 
 
