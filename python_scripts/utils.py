@@ -4,7 +4,8 @@ import platform
 import re
 import collections
 
-
+# update this when using script in another mod
+mod_name = 'com.pa.domdom.guma_guma_slide'
 
 def data_dir():
     path = 'unknown'
@@ -23,7 +24,9 @@ def build():
 
 def mod_dir():
     path = os.path.dirname(__file__)
-    print path
+    i = path.find(mod_name)
+    
+    return path[0:i + len(mod_name)]
     
 
 def pa_dir():
@@ -43,9 +46,6 @@ def pa_dir():
                         return os.path.normpath(os.path.join(m.group(1), '../../Resources/media'))
 
 
-
-mod_dir()
-
 # loads a json file from the pa media directory
 def load_base_json(path):
     if path[0] == '/':
@@ -61,12 +61,14 @@ def load_mod_json(path):
     if path[0] == '/':
         path = path[1:]
     
-    path = os.path.join(pa_dir(), path)
+    path = os.path.join(mod_dir(), path)
         
     if os.path.exists(path):
         return json.load(open(path), object_pairs_hook=collections.OrderedDict)
     else: 
         return None
 
+print load_base_json('/pa/units/unit_list.json')
+print load_mod_json('/pa/units/unit_list.json')
 
 
