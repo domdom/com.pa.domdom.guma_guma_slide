@@ -14,18 +14,17 @@ base_spiral = json.loads('''{
     "spec" : {
         "shader": "particle_transparent",
         "shape": "string",
-        "size": [[0, 1], [1, 0]],
+        "size": [[0, 0], [0.1, 1], [1, 0]],
+        "alpha": [[0, 0], [0.1, 1], [1, 0]],
         "baseTexture": "/pa/effects/textures/particles/flat.papa",
         "rampTexture": "/pa/effects/textures/particles/uncompressed/no_ramp.papa"
     },
-    "offsetY" : 0,
-    "offsetX" : 0,
-    "delay" : 10,
+    "useWorldSpace" : true,
     "lifetime": 2,
-    "emitterLifetime" : 5,
-    "useWorldSpace": true,
+    "emitterLifetime": 5,
     "emissionRate" : 100,
     "bLoop": false,
+    "delay": 5,
     "endDistance": -1
 }''', object_pairs_hook=collections.OrderedDict)
 
@@ -56,7 +55,7 @@ def r(t):
     return 2.0
 
 
-# base['emitters'] = []
+base['emitters'] = []
 
 for i in xrange(primary_num * 2):
     emitter = copy.deepcopy(base_spiral)
@@ -70,7 +69,7 @@ for i in xrange(primary_num * 2):
     emitter['spec']['red'], emitter['spec']['green'], emitter['spec']['blue'] = rgb
 
     emitter['size'] = 4
-    emitter['delay'] = 10
+    emitter['delay'] = 3
 
     # set the offsets as an array
     emitter['offsetX'] = []
