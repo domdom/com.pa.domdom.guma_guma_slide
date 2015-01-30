@@ -1,4 +1,18 @@
 {
+    "base_spec": "/pa/units/commanders/base_commander/base_commander.json", 
+    "display_name": "Kuma", 
+    "description": "Student", 
+    "model": {
+        "filename": "/pa/units/commanders/quad_osiris/quad_osiris.papa", 
+        "animations": {
+            "walk": "/pa/units/commanders/quad_base/quad_base_anim_walk.papa", 
+            "idle": "/pa/units/commanders/quad_base/quad_base_anim_idle.papa", 
+            "aim_up": "/pa/units/commanders/quad_base/quad_base_anim_aimUp.papa", 
+            "aim_down": "/pa/units/commanders/quad_base/quad_base_anim_aimDown.papa"
+        }, 
+        "animtree": "/pa/anim/anim_trees/commander_anim_tree.json", 
+        "walk_speed": 5.0
+    }, 
     "audio": {
         "loops": {
             "build": {
@@ -14,19 +28,5 @@
                 "should_stop_func": "is_not_moving"
             }
         }
-    }, 
-    "base_spec": "/pa/units/commanders/base_commander/base_commander.json", 
-    "description": "Student", 
-    "display_name": "Kuma", 
-    "model": {
-        "animations": {
-            "aim_down": "/pa/units/commanders/quad_base/quad_base_anim_aimDown.papa", 
-            "aim_up": "/pa/units/commanders/quad_base/quad_base_anim_aimUp.papa", 
-            "idle": "/pa/units/commanders/quad_base/quad_base_anim_idle.papa", 
-            "walk": "/pa/units/commanders/quad_base/quad_base_anim_walk.papa"
-        }, 
-        "animtree": "/pa/anim/anim_trees/commander_anim_tree.json", 
-        "filename": "/pa/units/commanders/quad_osiris/quad_osiris.papa", 
-        "walk_speed": 5.0
     }
 }

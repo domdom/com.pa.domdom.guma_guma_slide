@@ -1,7 +1,7 @@
 {
-    "base_spec": "/pa/units/commanders/quad_base/quad_base.json", 
-    "display_name": "Squidward", 
-    "description": "Spongebob Squarepants", 
+    "base_spec": "/pa/units/commanders/raptor_base/raptor_base.json", 
+    "display_name": "Kuma", 
+    "description": "Student", 
     "attachable": {
         "offsets": {
             "root": [
@@ -11,21 +11,21 @@
             ], 
             "head": [
                 0, 
-                0.8, 
-                12
+                -0.5, 
+                10.6
             ]
         }
     }, 
     "model": {
-        "filename": "/pa/units/commanders/quad_gambitdfa/quad_gambitdfa.papa"
+        "filename": "/pa/units/commanders/raptor_majuju/raptor_majuju.papa"
     }, 
     "headlights": [
         {
             "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa", 
             "offset": [
-                0.0, 
-                -1.2, 
-                4.3
+                0, 
+                -2.149, 
+                1.488
             ], 
             "orientation": [
                 0.0, 
@@ -49,9 +49,9 @@
     "lamps": [
         {
             "offset": [
-                0.0, 
-                -5.26, 
-                0.61
+                0, 
+                -3.9, 
+                0.76
             ], 
             "radius": 2.0, 
             "color": [
@@ -64,9 +64,9 @@
         }, 
         {
             "offset": [
-                0.0, 
-                -5.672, 
-                1.33
+                0.4, 
+                3.46, 
+                -1.1
             ], 
             "radius": 4.0, 
             "color": [
@@ -79,8 +79,8 @@
         }
     ], 
     "mesh_bounds": [
-        10, 
-        9.71255, 
-        10.6193
+        10.5, 
+        9.2, 
+        13.0
     ]
 }

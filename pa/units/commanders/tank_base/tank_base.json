@@ -1,4 +1,20 @@
 {
+    "base_spec": "/pa/units/commanders/base_commander/base_commander.json", 
+    "display_name": "Tank Class Commander", 
+    "description": "Tank Class Commander. - If you're seeing this, something is wrong in your commander.", 
+    "model": {
+        "filename": "/pa/units/commanders/tank_aeson/tank_aeson.papa", 
+        "animations": {
+            "walk": "/pa/units/commanders/tank_base/tank_base_anim_walk.papa", 
+            "aim_up": "/pa/units/commanders/tank_base/tank_base_anim_aimUp.papa", 
+            "idle": "/pa/units/commanders/tank_base/tank_base_anim_idle.papa", 
+            "aim_down": "/pa/units/commanders/tank_base/tank_base_anim_aimDown.papa"
+        }, 
+        "animtree": "/pa/anim/anim_trees/commander_anim_tree.json"
+    }, 
+    "navigation": {
+        "turn_in_place": true
+    }, 
     "audio": {
         "loops": {
             "build": {
@@ -14,21 +30,5 @@
                 "should_stop_func": "is_not_moving"
             }
         }
-    }, 
-    "base_spec": "/pa/units/commanders/base_commander/base_commander.json", 
-    "description": "Tank Class Commander. - If you're seeing this, something is wrong in your commander.", 
-    "display_name": "Tank Class Commander", 
-    "model": {
-        "animations": {
-            "aim_down": "/pa/units/commanders/tank_base/tank_base_anim_aimDown.papa", 
-            "aim_up": "/pa/units/commanders/tank_base/tank_base_anim_aimUp.papa", 
-            "idle": "/pa/units/commanders/tank_base/tank_base_anim_idle.papa", 
-            "walk": "/pa/units/commanders/tank_base/tank_base_anim_walk.papa"
-        }, 
-        "animtree": "/pa/anim/anim_trees/commander_anim_tree.json", 
-        "filename": "/pa/units/commanders/tank_aeson/tank_aeson.papa"
-    }, 
-    "navigation": {
-        "turn_in_place": true
     }
 }
