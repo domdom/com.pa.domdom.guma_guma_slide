@@ -84,10 +84,10 @@ def print_unit(name):
 
 	output += h5('General')
 	if 'command_caps' in unit:
-		output += p('Commands: ', join([x.replace('ORDER_', '') for x in unit['command_caps']], ', '))
+		output += p('Commands: ', join([x.replace('ORDER_', '') for x in unit['command_caps']], ', '), '  ')
 	if 'navigation' in unit:
 		output += p('Speed: ', unit['navigation']['move_speed'], ' m/s, Accel: ', unit['navigation']['acceleration'],\
-		' m/s/s, Brake: ', unit['navigation']['brake'], ' m/s/s, Turn: ', unit['navigation']['turn_speed'], ' degrees/s')
+		' m/s/s, Brake: ', unit['navigation']['brake'], ' m/s/s, Turn: ', unit['navigation']['turn_speed'], ' degrees/s  ')
 	output += '\n'
 	if 'command_caps' in unit and 'ORDER_Attack' in unit['command_caps']:
 		output += h5('Attack')
