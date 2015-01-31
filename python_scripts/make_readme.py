@@ -124,7 +124,7 @@ Metal Cost: 30
 Build Arm: Metal: 2 Energy: 0
 
 Kuma (Commander):
-Your leader! a fearless Kuma!
+Your leader! A fearless Kuma!
 
 Health: 1200
 Move speed: 45
