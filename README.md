@@ -13,8 +13,8 @@ Now the Kuma fight to control the essence of yuri love! May your trail shine bri
 ##Mod Details
 ###Guma Guma Slide Units
 
-####Base Commander
-Base Commander Description - If you're seeing this, something is wrong in your commander.
+####Kuma
+Your leader! A fearless Kuma! Growl!
 
 Health: 1200, Metal Cost: 120
 #####General
