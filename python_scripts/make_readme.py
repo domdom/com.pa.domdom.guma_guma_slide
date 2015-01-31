@@ -1,6 +1,8 @@
 import os
 import json
-import pa_paths
+import utils
+
+from collections import OrderedDict
 
 mode = 'md'
 
@@ -10,38 +12,41 @@ output = ''
 """
 """
 
-print pa_paths.get_pa_data_dir()
+print utils.pa_dir()
 
-unit_list = {
-    'commander' : '/pa/units/commanders/base_commander/base_commander.json',
-    'guma' : '/pa/units/land/assault_bot/assault_bot.json',
-    'bot_fac' : '/pa/units/land/bot_factory/bot_factory.json',
-    'fab_bot' : '/pa/units/land/fabrication_bot_combat/fabrication_bot_combat.json',
-    'radar' : '/pa/units/land/radar/radar.json',
-    'pgen' : '/pa/units/land/energy_plant/energy_plant.json',
-    'mex' : '/pa/units/land/metal_extractor/metal_extractor.json'
-}
+unit_list = OrderedDict([
+    ('commander', '/pa/units/commanders/base_commander/base_commander.json'),
+    ('guma', '/pa/units/land/assault_bot/assault_bot.json'),
+    ('fab_bot', '/pa/units/land/fabrication_bot_combat/fabrication_bot_combat.json'),
+    ('bot_fac', '/pa/units/land/bot_factory/bot_factory.json'),
+    ('radar', '/pa/units/land/radar/radar.json'),
+    ('pgen', '/pa/units/land/energy_plant/energy_plant.json'),
+    ('mex', '/pa/units/land/metal_extractor/metal_extractor.json')
+])
 
 def load(name):
-    f = os.path.join(os.path.abspath('..'), os.path.normpath(name)[1:])
-    print os.path.abspath('..')
-    print f
-    return json.load(open(f))
+	return utils.load_mod_json(name)
 
-def h1(str):
-    if mode == 'md': return '#' + str + '\n'
+def join(arg, glue=''):
+	return glue.join([str(x) for x in arg])
 
-def h2(str):
-    if mode == 'md': return '##' + str + '\n'
+def h1(*arg):
+    if mode == 'md': return '#' + join(arg) + '\n'
 
-def h3(str):
-    if mode == 'md': return '###' + str + '\n'
+def h2(*arg):
+    if mode == 'md': return '##' + join(arg) + '\n'
 
-def h4(str):
-    if mode == 'md': return '####' + str + '\n'
+def h3(*arg):
+    if mode == 'md': return '###' + join(arg) + '\n'
+
+def h4(*arg):
+    if mode == 'md': return '####' + join(arg) + '\n'
+
+def h5(*arg):
+    if mode == 'md': return '#####' + join(arg) + '\n'
     
-def p(str):
-    if mode == 'md': return str + '\n'
+def p(*arg):
+    if mode == 'md': return join(arg) + '\n'
 
 def a(name, link):
     if mode == 'md': return '(%s)[%s]' % (name, link)
@@ -68,13 +73,30 @@ output += h3('Guma Guma Slide Units')
 
 output += '\n'
 
-# get unit file for guma!
-guma = load(unit_list['guma'])
-output += h4(guma['display_name'])
-output += p(guma['description'])
-output += '\n'
+def print_unit(name):
+	output = ''
+	# get unit file for guma!
+	unit = load(unit_list[name])
+	output += h4(unit['display_name'])
+	output += p(unit['description'])
+	output += '\n'
+	output += p('Health: ' + str(unit['max_health']) + ', Metal Cost: ' + str(unit['build_metal_cost']))
 
-# print json.dumps(guma)
+	output += h5('General')
+	if 'command_caps' in unit:
+		output += p('Commands: ', join([x.replace('ORDER_', '') for x in unit['command_caps']], ', '))
+	if 'navigation' in unit:
+		output += p('Speed: ', unit['navigation']['move_speed'], ' m/s, Accel: ', unit['navigation']['acceleration'],\
+		' m/s/s, Brake: ', unit['navigation']['brake'], ' m/s/s, Turn: ', unit['navigation']['turn_speed'], ' degrees/s')
+	output += '\n'
+	if 'command_caps' in unit and 'ORDER_Attack' in unit['command_caps']:
+		output += h5('Attack')
+
+
+	return output
+
+for unit in unit_list:
+	output += print_unit(unit)
 
 '''
 Guma:
