@@ -1,18 +1,4 @@
 {
-    "base_spec": "/pa/units/commanders/base_commander/base_commander.json", 
-    "display_name": "Kuma", 
-    "description": "Student", 
-    "model": {
-        "filename": "/pa/units/commanders/raptor_nemicus/raptor_nemicus.papa", 
-        "animations": {
-            "walk": "/pa/units/commanders/raptor_base/raptor_base_anim_walk01.papa", 
-            "idle": "/pa/units/commanders/raptor_base/raptor_base_anim_idle01.papa", 
-            "aim_up": "/pa/units/commanders/raptor_base/raptor_base_anim_aimUp.papa", 
-            "aim_down": "/pa/units/commanders/raptor_base/raptor_base_anim_aimDown.papa"
-        }, 
-        "animtree": "/pa/anim/anim_trees/commander_anim_tree.json", 
-        "walk_speed": 4.93
-    }, 
     "audio": {
         "loops": {
             "build": {
@@ -28,5 +14,19 @@
                 "should_stop_func": "is_not_moving"
             }
         }
+    }, 
+    "base_spec": "/pa/units/commanders/base_commander/base_commander.json", 
+    "description": "Student", 
+    "display_name": "Kuma", 
+    "model": {
+        "animations": {
+            "aim_down": "/pa/units/commanders/raptor_base/raptor_base_anim_aimDown.papa", 
+            "aim_up": "/pa/units/commanders/raptor_base/raptor_base_anim_aimUp.papa", 
+            "idle": "/pa/units/commanders/raptor_base/raptor_base_anim_idle01.papa", 
+            "walk": "/pa/units/commanders/raptor_base/raptor_base_anim_walk01.papa"
+        }, 
+        "animtree": "/pa/anim/anim_trees/commander_anim_tree.json", 
+        "filename": "/pa/units/commanders/raptor_nemicus/raptor_nemicus.papa", 
+        "walk_speed": 4.93
     }
 }

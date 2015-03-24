@@ -1,7 +1,7 @@
 {
   "base_spec": "/pa/units/land/base_bot/base_bot.json",
   "display_name": "Guma",
-  "description": "Fast, high dps guma, medium range. Growl!",
+  "description": "Guma Guma Guma Guma.",
   "max_health": 1,
   "build_metal_cost": 3,
   "attachable": {

@@ -1,7 +1,7 @@
 {
     "base_spec": "/pa/units/commanders/imperial_base/imperial_base.json",
-    "display_name": "Kakashi Sensei",
-    "description": "Naruto",
+    "display_name": "Buttercup",
+    "description": "Power Puff Girls",
     "attachable": {
         "offsets": {
             "root": [
@@ -12,19 +12,19 @@
             "head": [
                 0,
                 0,
-                13.2
+                12.2
             ]
         }
     },
     "model": {
-        "filename": "/pa/units/commanders/imperial_aceal/imperial_aceal.papa"
+        "filename": "/pa/units/commanders/imperial_mjon/imperial_mjon.papa"
     },
     "headlights": [
         {
             "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
             "offset": [
                 0,
-                -2.3,
+                -1.7,
                 1.9
             ],
             "orientation": [
@@ -50,8 +50,8 @@
         {
             "offset": [
                 0,
-                -1.9,
-                2.8
+                -3.04,
+                2.88
             ],
             "radius": 2,
             "color": [
@@ -77,10 +77,5 @@
             "intensity": 2,
             "bone": "bone_leftElbow"
         }
-    ],
-    "mesh_bounds": [
-        10,
-        6,
-        12
     ]
 }
