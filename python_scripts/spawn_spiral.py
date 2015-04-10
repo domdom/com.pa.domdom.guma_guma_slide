@@ -1,6 +1,6 @@
 import math
 # Used for making rainbows
-import rainbows
+import colorsys
 import utils
 
 import json
@@ -73,8 +73,8 @@ def add_spirals():
         emitter = copy.deepcopy(base_spiral)
 
         offset = (float(i) / primary_num) / 3.0
-        
-        rgb = rainbows.rgb_from_hsv(math.fmod(offset + 1.0/12, 1))
+
+        rgb = colorsys.hsv_to_rgb(math.fmod(offset + 1.0/12, 1), 1, 1)
         rgb = rgb[0] * 4, rgb[1] * 4, rgb[2] * 4
         
         emitter['spec']['red'], emitter['spec']['green'], emitter['spec']['blue'] = rgb
