@@ -11,7 +11,7 @@
     ]
   },
   "physics": {
-    "radius": 10,
+    "radius": 1,
     "push_class": 1,
     "ignore_gravity": false,
     "add_to_spatial_db": false,

@@ -23,12 +23,13 @@
             "aim_down": "/pa/units/commanders/tank_base/tank_base_anim_aimDown.papa", 
             "aim_up": "/pa/units/commanders/tank_base/tank_base_anim_aimUp.papa", 
             "idle": "/pa/units/commanders/tank_base/tank_base_anim_idle.papa", 
-            "walk": "/pa/units/commanders/tank_base/tank_base_anim_walk.papa"
+            "walk": "/pa/units/commanders/tank_base/tank_base_anim_walk.papa", 
+            "walk_stop": "/pa/units/commanders/tank_base/tank_base_anim_walkStop.papa"
         }, 
-        "animtree": "/pa/anim/anim_trees/commander_anim_tree.json", 
+        "animtree": "/pa/anim/anim_trees/commander_tank_anim_tree.json", 
         "filename": "/pa/units/commanders/tank_aeson/tank_aeson.papa"
     }, 
     "navigation": {
-        "turn_in_place": true
+        "turn_in_place": false
     }
 }

@@ -51,6 +51,12 @@
           "channel": "sight",
           "shape": "capsule",
           "radius": 110
+        },
+        {
+          "layer": "underwater",
+          "channel": "sight",
+          "shape": "capsule",
+          "radius": 110
         }
       ]
     }
@@ -208,16 +214,19 @@
       "intensity": 2.0
     }
   ],
+  "selection_icon": {
+    "diameter": 49.5
+  },
   "mesh_bounds": [
     29.5,
     30.5,
     15.2
   ],
   "placement_size": [
-    30,
-    60
+    40,
+    55
   ],
-  "area_build_separation": 3,
+  "area_build_separation": 2,
   "TEMP_texelinfo": 38.3936,
   "physics": {
     "collision_layers": "WL_AnyHorizontalGroundOrWaterSurface"

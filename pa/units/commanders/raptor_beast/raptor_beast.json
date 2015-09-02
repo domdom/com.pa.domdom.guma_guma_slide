@@ -14,6 +14,14 @@
         }
     }, 
     "base_spec": "/pa/units/commanders/raptor_base/raptor_base.json", 
+    "catalog_object_name": "RaptorBeast", 
+    "client": {
+        "ui": {
+            "image": "/ui/main/shared/img/commanders/img_raptor_beast.png", 
+            "profile_image": "/ui/main/shared/img/commanders/profiles/profile_raptor_beast.png", 
+            "thumb_image": "/ui/main/shared/img/commanders/thumbs/img_raptor_beast_thumb.png"
+        }
+    }, 
     "description": "Student", 
     "display_name": "Kuma", 
     "headlights": [

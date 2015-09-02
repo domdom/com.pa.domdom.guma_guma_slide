@@ -1,19 +1,18 @@
 {
-    "enabled" : true,
-    "context" : "server",
-    "identifier" : "com.pa.domdom.guma_guma_slide",
-    "display_name" : "Guma Guma Slide",
-    "description" : "A fast paced custom game bringing PA to life with rainbows and beams of love!",
-    "author" : "Yuri Bros",
-    "version" : "1.4.0",
-	"build": "80187",
-    "date": "2015/04/10",
+    "context": "server",
+    "identifier": "com.pa.domdom.guma_guma_slide",
+    "display_name": "Guma Guma Slide",
+    "description": "A fast paced custom game bringing PA to life with rainbows and beams of love!",
+    "author": "Yuri Bros",
+    "version": "1.5.0",
     "forum": "https://forums.uberent.com/threads/rel-guma-guma-slide.67174/",
     "category": [
         "server-mod",
-		"units",
-		"game-mode"
+        "units",
+        "game-mode"
     ],
     "icon": "http://i.imgur.com/Ru0njgV.jpg",
-    "priority": 500
+    "priority": 500,
+    "build": "86765",
+    "date": "2015/09/02"
 }

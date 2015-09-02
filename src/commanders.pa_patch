@@ -1,0 +1,155 @@
+[
+ {
+        "target" : "/pa/units/commanders/base_commander/base_commander.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/max_health", "value" : 1200},
+            {"op" : "replace", "path" : "/build_metal_cost", "value" : 120},
+            {"op" : "replace", "path" : "/navigation/move_speed", "value" : 45},
+            {"op" : "replace", "path" : "/navigation/acceleration", "value" : -1},
+            {"op" : "replace", "path" : "/navigation/brake", "value" : -1},
+            {"op" : "replace", "path" : "/navigation/turn_speed", "value" : 720},
+
+            {"op" : "replace", "path" : "/production/energy", "value" : 2},
+            {"op" : "replace", "path" : "/production/metal", "value" : 2},
+            {"op" : "replace", "path" : "/storage/energy", "value" : 50},
+            {"op" : "replace", "path" : "/storage/metal", "value" : 125},
+
+            {"op" : "replace", "path" : "/tools", "value" : [
+                {
+                  "spec_id": "/pa/tools/commander_build_arm/commander_build_arm.json",
+                  "aim_bone": "bone_turret"
+                },
+                {
+                  "spec_id": "/pa/units/commanders/base_commander/base_commander_bullet_weapon.json",
+                  "aim_bone": "bone_turret",
+                  "muzzle_bone": "socket_rightMuzzle",
+                  "primary_weapon": true
+                },
+                {
+                  "spec_id": "/pa/units/commanders/base_commander/love_bullet_weapon.json",
+                  "aim_bone": "bone_turret",
+                  "secondary_weapon": true
+                }
+              ]
+            },
+            {"op" : "replace", "path" : "/fx_offsets", "value" : [
+                {
+                  "type": "build",
+                  "filename": "/pa/effects/specs/fab_spray.pfx",
+                  "bone": "socket_leftMuzzle"
+                }, {
+                    "type": "idle",
+                    "filename": "/pa/units/commanders/base_commander/shield.pfx",
+                    "bone": "bone_root",
+                    "offset": [0, 0, 0],
+                    "orientation": [0, 0, 0]
+                }, {
+                    "type": "moving",
+                    "filename": "/pa/units/commanders/base_commander/rainbow_trail.pfx",
+                    "bone": "bone_root",
+                    "offset": [0, 0, 4],
+                    "orientation": [0, 0, 0]
+                }
+              ]
+            }
+        ]
+    },
+    {
+        "target" : [
+            "/pa/units/commanders/base_commander/base_commander_ammo.json",
+            "/pa/units/commanders/base_commander/base_commander_bullet_weapon.json",
+            "/pa/units/commanders/base_commander/love_bullet.json",
+            "/pa/units/commanders/base_commander/love_bullet_weapon.json",
+
+            "/pa/units/commanders/base_commander/base_commander_bullet_trail_effect.pfx",
+            "/pa/units/commanders/base_commander/rainbow_trail.pfx",
+            "/pa/units/commanders/base_commander/shield.pfx"
+        ]
+    },
+    {
+        "patch" : [
+            {"op" : "test_in", "path" : "", "value" : "base_spec"},
+            {"op" : "test_in", "path" : "/base_spec", "value" : "commanders"},
+            {"op" : "test_in", "path" : "", "value" : "tools"},
+            {"op" : "remove", "path" : "/tools"}
+        ]
+    },
+    {
+        "target" : "/pa/units/commanders/imperial_aceal/imperial_aceal.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Kakashi Sensei"},
+            {"op" : "replace", "path" : "/description", "value" : "Naruto"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/imperial_alpha/imperial_alpha.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Android 18"},
+            {"op" : "replace", "path" : "/description", "value" : "Dragonball Z"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/imperial_chronoblip/imperial_chronoblip.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Elite Senpai"},
+            {"op" : "replace", "path" : "/description", "value" : "Where's my sandwich?"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/imperial_enzomatrix/imperial_enzomatrix.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Blossum"},
+            {"op" : "replace", "path" : "/description", "value" : "Power Puff Girls"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/imperial_invictus/imperial_invictus.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Kamina"},
+            {"op" : "replace", "path" : "/description", "value" : "Tengen Toppa Gurren Lagann"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/imperial_mjon/imperial_mjon.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Buttercup"},
+            {"op" : "replace", "path" : "/description", "value" : "Power Puff Girls"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/imperial_theta/imperial_theta.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Lawrence"},
+            {"op" : "replace", "path" : "/description", "value" : "Spice And Wolf"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/quad_armalisk/quad_armalisk.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Howl"},
+            {"op" : "replace", "path" : "/description", "value" : "Howls Moving Castle"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/quad_gambitdfa/quad_gambitdfa.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Squidward"},
+            {"op" : "replace", "path" : "/description", "value" : "Spongebob Squarepants"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/quad_spiderofmean/quad_spiderofmean.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Holo The Wise Wolf"},
+            {"op" : "replace", "path" : "/description", "value" : "Holo is a wolf harvest deity originally from a land in the north known as Yoitsu."}
+    ]},
+    {
+        "target" : "/pa/units/commanders/quad_tokamaktech/quad_tokamaktech.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Yurizono"},
+            {"op" : "replace", "path" : "/description", "value" : "Yuri Kuma Arashi"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/quad_twoboots/quad_twoboots.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Yurishiro"},
+            {"op" : "replace", "path" : "/description", "value" : "Yuri Kuma Arashi"}
+    ]},
+    {
+        "target" : "/pa/units/commanders/raptor_majuju/raptor_majuju.json",
+        "patch" : [
+            {"op" : "replace", "path" : "/display_name", "value" : "Bubbles"},
+            {"op" : "replace", "path" : "/description", "value" : "Kuma"}
+    ]}
+]

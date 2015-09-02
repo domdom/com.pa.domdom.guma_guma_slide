@@ -14,7 +14,15 @@
         }
     }, 
     "base_spec": "/pa/units/commanders/imperial_base/imperial_base.json", 
-    "description": "Student Council President", 
+    "catalog_object_name": "DeltaCommander", 
+    "client": {
+        "ui": {
+            "image": "/ui/main/shared/img/commanders/img_imperial_delta.png", 
+            "profile_image": "/ui/main/shared/img/commanders/profiles/profile_imperial_delta.png", 
+            "thumb_image": "/ui/main/shared/img/commanders/thumbs/img_imperial_delta_thumb.png"
+        }
+    }, 
+    "description": "Student", 
     "display_name": "Kuma", 
     "headlights": [
         {

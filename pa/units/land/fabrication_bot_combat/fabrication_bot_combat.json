@@ -19,12 +19,11 @@
     }
   },
   "buildable_types": "CombatFabBuild",
-  "can_only_assist_with_buildable_items": true,
   "unit_types": [
-    "UNITTYPE_Fabber",
     "UNITTYPE_Construction",
     "UNITTYPE_Bot",
     "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
     "UNITTYPE_Land",
     "UNITTYPE_Basic",
     "UNITTYPE_FactoryBuild",
@@ -33,7 +32,11 @@
   "command_caps": [
     "ORDER_Move",
     "ORDER_Patrol",
-    "ORDER_Repair"
+    "ORDER_Build",
+    "ORDER_Reclaim",
+    "ORDER_Repair",
+    "ORDER_Assist",
+    "ORDER_Use"
   ],
   "transportable": {
     "size": 1
@@ -41,15 +44,14 @@
   "guard_layer": "WL_LandHorizontal",
   "navigation": {
     "type": "amphibious",
-    "acceleration": 120,
-    "brake": 120,
+    "acceleration": -1,
+    "brake": -1,
     "move_speed": 5,
-    "turn_speed": 720,
+    "turn_speed": 360,
     "group_preference": "back"
   },
   "physics": {
     "radius": 2,
-    "push_class": 2,
     "allow_pushing": true
   },
   "recon": {
@@ -57,6 +59,18 @@
       "items": [
         {
           "layer": "surface_and_air",
+          "channel": "sight",
+          "shape": "capsule",
+          "radius": 100
+        },
+        {
+          "layer": "underwater",
+          "channel": "sight",
+          "shape": "capsule",
+          "radius": 100
+        },
+        {
+          "layer": "mine",
           "channel": "sight",
           "shape": "capsule",
           "radius": 100
@@ -86,7 +100,7 @@
     },
     "died": {
       "audio_cue": "/SE/Death/Bot",
-      "effect_scale": 1.0
+      "effect_scale": 1.3
     }
   },
   "audio": {
@@ -125,6 +139,9 @@
       ]
     }
   ],
+  "selection_icon": {
+    "diameter": 9.5
+  },
   "TEMP_texelinfo": 5.11028,
   "mesh_bounds": [
     3.7,

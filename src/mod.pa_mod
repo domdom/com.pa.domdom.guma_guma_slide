@@ -1,0 +1,178 @@
+{
+    "options" : {
+        "debug_mode" : false,
+        "output_dir" : "..",
+        "pretty_print_effects" : true,
+        "indent" : 2
+    },
+    "modinfo" : {
+        "context" : "server",
+        "identifier" : "com.pa.domdom.guma_guma_slide",
+        "display_name" : "Guma Guma Slide",
+        "description" : "A fast paced custom game bringing PA to life with rainbows and beams of love!",
+        "author" : "Yuri Bros",
+        "version" : "1.5.0",
+        "forum": "https://forums.uberent.com/threads/rel-guma-guma-slide.67174/",
+        "category": [
+            "server-mod",
+            "units",
+            "game-mode"
+        ],
+        "icon": "http://i.imgur.com/Ru0njgV.jpg",
+        "priority": 500
+    },
+    "mod" : [
+        {"target" : "/ui/main/shared/js/build.js"},
+        {
+            "target" : "/pa/units/land/bot_factory/bot_factory.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/max_health", "value" : 1000},
+                {"op" : "replace", "path" : "/build_metal_cost", "value" : 40},
+                {"op" : "replace", "path" : "/wait_to_rolloff_time", "value" : 0},
+                {"op" : "replace", "path" : "/factory_cooldown_time", "value" : 1},
+                {"op" : "replace", "path" : "/display_name", "value" : "Training Facility"},
+                {"op" : "replace", "path" : "/description", "value" : "Guma and Honey Flower are trained here."}
+            ]
+        },
+        {
+            "target" : "/pa/units/land/bot_factory/bot_factory_build_arm.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/construction_demand", "value" : {
+                    "energy": 1.5,
+                    "metal": 1.5
+                }}
+            ]
+        },
+        {
+            "target" : "/pa/units/land/energy_plant/energy_plant.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/max_health", "value" : 200},
+                {"op" : "replace", "path" : "/build_metal_cost", "value" : 30},
+                {"op" : "replace", "path" : "/production/energy", "value" : 1},
+                {"op" : "replace", "path" : "/display_name", "value" : "Power of Kuma"},
+                {"op" : "replace", "path" : "/description", "value" : "Powers your Kuma War Machine"}
+            ]
+        },
+        {
+            "target" : "/pa/units/land/metal_extractor/metal_extractor.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/max_health", "value" : 100},
+                {"op" : "replace", "path" : "/build_metal_cost", "value" : 10},
+                {"op" : "replace", "path" : "/production/metal", "value" : 1},
+                {"op" : "replace", "path" : "/display_name", "value" : "Metal of Kuma"},
+                {"op" : "replace", "path" : "/description", "value" : "Metal for your Kuma war machine"}
+            ]
+        },
+        {
+            "target" : "/pa/units/land/radar/radar.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/max_health", "value" : 500},
+                {"op" : "replace", "path" : "/build_metal_cost", "value" : 12},
+                {"op" : "replace", "path" : "/consumption/energy", "value" : 0},
+                {"op" : "add",     "path" : "/unit_types/-", "value" : "UNITTYPE_CmdBuild"},
+                {"op" : "replace", "path" : "/display_name", "value" : "Guma Detection Device"},
+                {"op" : "replace", "path" : "/recon/observer/items", "value" : [
+                    {
+                      "layer": "surface_and_air",
+                      "channel": "sight",
+                      "shape": "capsule",
+                      "radius": 100,
+                      "uses_energy": true
+                    },
+                    {
+                      "layer": "surface_and_air",
+                      "channel": "radar",
+                      "shape": "capsule",
+                      "radius": 600,
+                      "uses_energy": true
+                    }
+                  ]
+                },
+                {"op" : "replace", "path" : "/description", "value" : "Shows enemy Guma and their war machines"}
+            ]
+        },
+        {
+            "target" : "/pa/units/land/assault_bot/assault_bot.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/max_health", "value" : 1},
+                {"op" : "replace", "path" : "/build_metal_cost", "value" : 3},
+                {"op" : "replace", "path" : "/navigation/move_speed", "value" : 45},
+                {"op" : "replace", "path" : "/navigation/acceleration", "value" : -1},
+                {"op" : "replace", "path" : "/navigation/brake", "value" : -1},
+                {"op" : "replace", "path" : "/navigation/turn_speed", "value" : 720},
+                {"op" : "add", "path" : "/command_caps", "value" : ["ORDER_Move","ORDER_Attack","ORDER_Assist"]},
+                {"op" : "replace", "path" : "/display_name", "value" : "Guma"},
+                {"op" : "replace", "path" : "/description", "value" : "Guma Guma Guma Guma"}
+            ]
+        },
+        {
+            "target" : "/pa/units/land/assault_bot/assault_bot_tool_weapon.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/rate_of_fire", "value" : 3},
+                {"op" : "replace", "path" : "/idle_aim_delay", "value" : 0},
+                {"op" : "replace", "path" : "/max_range", "value" : 75},
+                {"op" : "replace", "path" : "/yaw_rate", "value" : 360},
+                {"op" : "replace", "path" : "/pitch_rate", "value" : 360},
+                {"op" : "replace", "path" : "/pitch_range", "value": 40}
+            ]
+        },
+        {
+            "target" : "/pa/units/land/assault_bot/assault_bot_ammo.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/damage", "value" : 3},
+                {"op" : "replace", "path" : "/lifetime", "value" : 1},
+                {"op" : "replace", "path" : "/initial_velocity", "value" : 100},
+                {"op" : "replace", "path" : "/max_velocity", "value" : 100},
+                {"op" : "add", "path" : "/physics", "value" : {
+                    "gravity_scalar" : 0.5
+                }},
+                {"op" : "add", "path" : "/fx_trail", "value": {
+                    "filename": "/pa/units/land/assault_bot/laser_trail.pfx"
+                }}
+            ]
+        },
+        {
+            "target" : [
+                "/pa/effects/specs/rainbow_commander_landing.pfx",
+                "/pa/effects/specs/uber_proj_explosion.pfx",
+                "/pa/effects/specs/uber_proj_trail.pfx",
+                "/pa/units/land/assault_bot/laser_trail.pfx"
+            ]
+        },
+        { "from_file" : "commanders.pa_patch" },
+        {
+            "target" : "/pa/units/land/fabrication_bot_combat/fabrication_bot_combat_build_arm.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/construction_demand/energy", "value" : 0},
+                {"op" : "replace", "path" : "/construction_demand/metal", "value" : 2}
+            ]
+        },
+        {
+            "target" : "/pa/units/land/fabrication_bot_combat/fabrication_bot_combat.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/max_health", "value" : 100},
+                {"op" : "replace", "path" : "/build_metal_cost", "value" : 30},
+                {"op" : "replace", "path" : "/navigation/move_speed", "value" : 5},
+                {"op" : "replace", "path" : "/navigation/acceleration", "value" : -1},
+                {"op" : "replace", "path" : "/navigation/brake", "value" : -1},
+                {"op" : "replace", "path" : "/navigation/turn_speed", "value" : 360},
+                {"op" : "replace", "path" : "/display_name", "value" : "Honey Flower"},
+                {"op" : "replace", "path" : "/description", "value" : "Heal your Kuma with Honey!"}
+            ]
+        },
+        {
+            "target" : "/pa/tools/commander_build_arm/commander_build_arm.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/max_range", "value" : 30},
+                {"op" : "replace", "path" : "/construction_demand/energy", "value" : 1},
+                {"op" : "replace", "path" : "/construction_demand/metal", "value" : 4}
+            ]
+        },
+        {
+            "target" : "/pa/effects/specs/default_commander_landing_ent.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/spawn_response/effect_spec", "value" : "/pa/effects/specs/rainbow_commander_landing.pfx"}
+            ]
+        }
+    ]
+}

@@ -3,13 +3,13 @@ import json
 
 #root_part = os.path.abspath(os.sep)
 
-pa_path = "C:\Games\Uber Entertainment\Planetary Annihilation Launcher\Planetary Annihilation\stable\media"
+pa_path = "C:\Games\Planetary Annihilation\Planetary Annihilation\stable\media"
 
 mod_path = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
 
 print mod_path
 
-unit_list_path = "C:\Games\Uber Entertainment\Planetary Annihilation Launcher\Planetary Annihilation\stable\media\pa\units\unit_list.json"
+unit_list_path = "C:\Games\Planetary Annihilation\Planetary Annihilation\stable\media\pa\units\unit_list.json"
 
 unit_list = json.load(open(unit_list_path))
 
@@ -37,6 +37,16 @@ for unit in unit_list['units']:
         comm = json.load(open(mod_comm))
         display_name = comm['display_name']
         description = comm['description']
+        if display_name == "Kuma":
+            description = "Student"
+        else:
+            print(
+'''{
+    "target" : "''' + unit + '''",
+    "patch" : [
+        {"op" : "replace", "path" : "/display_name", "value" : "'''+display_name+'''"},
+        {"op" : "replace", "path" : "/description", "value" : "'''+description+'''"}
+]},''')
 
     if os.path.exists(pa_comm):
         comm = json.load(open(pa_comm))

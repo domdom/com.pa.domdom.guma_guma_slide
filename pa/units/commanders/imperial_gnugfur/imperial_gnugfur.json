@@ -14,7 +14,15 @@
         }
     }, 
     "base_spec": "/pa/units/commanders/imperial_base/imperial_base.json", 
-    "description": "Student Council President", 
+    "catalog_object_name": "ImperialGnugfur", 
+    "client": {
+        "ui": {
+            "image": "/ui/main/shared/img/commanders/img_imperial_gnugfur.png", 
+            "profile_image": "/ui/main/shared/img/commanders/profiles/profile_imperial_gnugfur.png", 
+            "thumb_image": "/ui/main/shared/img/commanders/thumbs/img_imperial_gnugfur_thumb.png"
+        }
+    }, 
+    "description": "Student", 
     "display_name": "Kuma", 
     "headlights": [
         {
@@ -43,6 +51,7 @@
             "shadow_resolution": 128
         }
     ], 
+    "kickstarter_backer": "Robert Krondorfer", 
     "lamps": [
         {
             "bone": "bone_spine", 

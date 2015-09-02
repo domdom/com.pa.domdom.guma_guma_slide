@@ -27,6 +27,12 @@
           "channel": "sight",
           "shape": "capsule",
           "radius": 100
+        },
+        {
+          "layer": "underwater",
+          "channel": "sight",
+          "shape": "capsule",
+          "radius": 100
         }
       ]
     }
@@ -235,14 +241,17 @@
       "bone": "bone_rotor"
     }
   ],
+  "selection_icon": {
+    "diameter": 21.5
+  },
   "mesh_bounds": [
     10,
     10,
     11.3
   ],
   "placement_size": [
-    12,
-    12
+    15,
+    15
   ],
   "TEMP_texelinfo": 15.8224
 }

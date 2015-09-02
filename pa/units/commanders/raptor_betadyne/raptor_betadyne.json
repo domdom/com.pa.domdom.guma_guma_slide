@@ -14,7 +14,15 @@
         }
     }, 
     "base_spec": "/pa/units/commanders/raptor_base/raptor_base.json", 
-    "description": "Student Council President", 
+    "catalog_object_name": "RaptorBetadyne", 
+    "client": {
+        "ui": {
+            "image": "/ui/main/shared/img/commanders/img_raptor_betadyne.png", 
+            "profile_image": "/ui/main/shared/img/commanders/profiles/profile_raptor_betadyne.png", 
+            "thumb_image": "/ui/main/shared/img/commanders/thumbs/img_raptor_betadyne_thumb.png"
+        }
+    }, 
+    "description": "Student", 
     "display_name": "Kuma", 
     "headlights": [
         {
@@ -43,6 +51,7 @@
             "shadow_resolution": 128
         }
     ], 
+    "kickstarter_backer": "Ron Pepper", 
     "lamps": [
         {
             "bone": "bone_spine", 
