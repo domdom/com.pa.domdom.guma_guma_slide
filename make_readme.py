@@ -25,7 +25,7 @@ unit_list = {
 }
 
 def load(name):
-    f = os.path.join(os.path.abspath('..'), os.path.normpath(name)[1:])
+    f = os.path.join(os.path.abspath('.'), os.path.normpath(name)[1:])
     print f
     return json.load(open(f))
 
@@ -42,7 +42,7 @@ def h4(str):
     if mode == 'md': return '####' + str + '\n'
     
 def p(str):
-    if mode == 'md': return str + '\n'
+    if mode == 'md': return str + '\n\n'
 
 def a(name, link):
     if mode == 'md': return '(%s)[%s]' % (name, link)
@@ -228,6 +228,6 @@ output += output_eco()
 output += output_school()
 output += output_radar()
 
-open('../readme.md', 'w').write(output)
+open('readme.md', 'w').write(output)
 
 print output
