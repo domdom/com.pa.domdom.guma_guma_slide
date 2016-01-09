@@ -17,7 +17,7 @@
     }
   },
   "model": {
-    "filename": "/pa/units/commanders/raptor_diremachine/raptor_diremachine.papa"
+    "filename": "/pa/units/commanders/raptor_enderstryke71/raptor_enderstryke71.papa"
   },
   "headlights": [
     {
@@ -50,8 +50,8 @@
     {
       "offset": [
         0,
-        -3.11,
-        2.748
+        -4.1,
+        0.45
       ],
       "radius": 2.0,
       "color": [
@@ -83,13 +83,12 @@
     9.2,
     13.0
   ],
-  "catalog_object_name": "RaptorDiremachine",
-  "kickstarter_backer": "",
+  "catalog_object_name": "RaptorEnderstryke71",
   "client": {
     "ui": {
-      "image": "/ui/main/shared/img/commanders/img_raptor_diremachine.png",
-      "thumb_image": "/ui/main/shared/img/commanders/thumbs/img_raptor_diremachine_thumb.png",
-      "profile_image": "/ui/main/shared/img/commanders/profiles/profile_raptor_diremachine.png"
+      "image": "/ui/main/shared/img/commanders/img_raptor_enderstryke71.png",
+      "thumb_image": "/ui/main/shared/img/commanders/thumbs/img_raptor_enderstryke71_thumb.png",
+      "profile_image": "/ui/main/shared/img/commanders/profiles/profile_raptor_enderstryke71.png"
     }
   }
 }

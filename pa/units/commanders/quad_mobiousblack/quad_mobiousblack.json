@@ -1,7 +1,7 @@
 {
   "base_spec": "/pa/units/commanders/quad_base/quad_base.json",
-  "display_name": "Berlinetta Commander",
-  "description": "Quadruped Berlinetta Commander",
+  "display_name": "Kuma",
+  "description": "Student",
   "attachable": {
     "offsets": {
       "root": [

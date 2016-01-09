@@ -1,7 +1,7 @@
 {
   "base_spec": "/pa/units/commanders/raptor_base/raptor_base.json",
-  "display_name": "Stickman9000 Commander",
-  "description": "Raptor Stickman9000 Commander",
+  "display_name": "Kuma",
+  "description": "Student",
   "attachable": {
     "offsets": {
       "root": [

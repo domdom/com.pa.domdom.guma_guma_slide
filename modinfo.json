@@ -4,15 +4,19 @@
     "display_name": "Guma Guma Slide",
     "description": "A fast paced custom game bringing PA to life with rainbows and beams of love!",
     "author": "Yuri Bros",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "forum": "https://forums.uberent.com/threads/rel-guma-guma-slide.67174/",
     "category": [
         "server-mod",
         "units",
         "game-mode"
     ],
+    "product": [
+        "Titans",
+        "Classic"
+    ],
     "icon": "http://i.imgur.com/Ru0njgV.jpg",
     "priority": 500,
-    "build": "86765",
-    "date": "2015/09/02"
+    "build": "89755",
+    "date": "2016/01/09"
 }

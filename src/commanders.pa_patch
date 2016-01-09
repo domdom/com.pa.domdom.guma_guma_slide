@@ -71,7 +71,9 @@
             {"op" : "test_in", "path" : "", "value" : "base_spec"},
             {"op" : "test_in", "path" : "/base_spec", "value" : "commanders"},
             {"op" : "test_in", "path" : "", "value" : "tools"},
-            {"op" : "remove", "path" : "/tools"}
+            {"op" : "remove", "path" : "/tools"},
+            {"op" : "replace", "path" : "/display_name", "value" : "Kuma"},
+            {"op" : "replace", "path" : "/description", "value" : "Student"}
         ]
     },
     {
