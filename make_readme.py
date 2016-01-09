@@ -65,7 +65,6 @@ The resulting fragments became a meteor shower that rained down on Earth, and fo
 Now the Kuma fight to control the essence of yuri love! May your trail shine brightest, and may true love guide you!''')
 
 output += h2('Mod Details')
-output += h3('Guma Guma Slide Units')
 
 output += '\n'
 
