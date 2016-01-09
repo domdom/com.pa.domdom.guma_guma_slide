@@ -13,6 +13,87 @@ Now the Kuma fight to control the essence of yuri love! May your trail shine bri
 ##Mod Details
 ###Guma Guma Slide Units
 
-####Guma
-Guma Guma Guma Guma.
+###Units
+####Base Commander (Commander)
+Your leader! A fearless Kuma!
 
+Health: 1200
+Move Speed: 45
+Sight: 200
+Metal Cost: 120
+
+Economy:
+  Storage: Metal: 125 Energy: 50
+  Production: Metal: 2 Energy: 2
+  Build Arm: Metal: 4 Energy: 1
+  (Commander builds pretty quick! And doesn't use much power)
+
+Main Weapon:
+  Rate of fire: 1
+  Range: 200
+  Damage: 20
+  Splash damage: 1
+  Splash radius: 3
+
+Love Gun (commander alt-fire):
+  Range: 200
+  Damage: 1 (x100 damage to other Kuma!)
+  Splash damage: 1
+  Splash radius: 40
+  (Huge radius, kill those pesky Guma globs!)
+  Can only fire once every 33.0 seconds. Needs energy to recharge
+
+####Guma
+Fast quick unit, medium range.
+
+Health: 1
+Move Speed: 45
+Sight: 105
+Metal Cost: 3
+
+Rate of fire: 3
+Range: 75
+Damage: 3
+Splash radius: 0
+(Note: shots move (relatively slowly) at about 100m/s which means how you move your Guma is important)
+
+####Honey Flower
+Slowly repairs nearby buildings and units.
+
+Health: 100
+Move Speed: 5
+Sight: 100
+Metal Cost: 30
+
+Repair Arm: Metal: 2 Energy: 0
+
+###Buildings
+####Power of Kuma
+Health: 200
+Metal Cost: 30
+Production: Energy: 1
+
+####Metal of Kuma
+Health: 100
+Metal Cost: 10
+Production: Metal: 1
+
+####Training Facility
+Guma training facility! Let your guma spread your True Love Regime!
+
+Health: 1000
+Metal Cost: 40
+
+Build Arm: Metal: 1.5 Energy: 1.5
+Roll off time: 1 second
+(Over time the factory consumes 1 metal and 1 power each second when training guma)
+
+####Guma Detection Device
+Detects frenemy units and buildings!
+
+Health: 500
+Metal Cost: 12
+Sight Range: 100
+Radar Range: 600
+Energy Consumption: None
+(The radar still deactivates when there is no power though, so be careful!)
