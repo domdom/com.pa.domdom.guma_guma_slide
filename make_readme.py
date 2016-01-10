@@ -42,7 +42,10 @@ def h4(str):
     if mode == 'md': return '####' + str + '\n'
     
 def p(str):
-    if mode == 'md': return str + '\n\n'
+    if mode == 'md': return str + '\n'
+
+def line(str):
+    if mode == 'md': return str + '  \n'
 
 def a(name, link):
     if mode == 'md': return '(%s)[%s]' % (name, link)
@@ -64,8 +67,6 @@ The resulting fragments became a meteor shower that rained down on Earth, and fo
 
 Now the Kuma fight to control the essence of yuri love! May your trail shine brightest, and may true love guide you!''')
 
-output += h2('Mod Details')
-
 output += '\n'
 
 def output_guma():
@@ -75,21 +76,19 @@ def output_guma():
     guma_gun = load(unit_list['guma_gun'])
     guma_ammo = load(unit_list['guma_ammo'])
 
-    output += h4(guma['display_name'])
+    output += h3(guma['display_name'])
     output += p('Fast quick unit, medium range.')
-    output += p('')
 
-    output += p('Health: ' + str(guma['max_health']))
-    output += p('Move Speed: ' + str(guma['navigation']['move_speed']))
-    output += p('Sight: ' + str(guma['recon']['observer']['items'][0]['radius']))
+    output += line('Health: ' + str(guma['max_health']))
+    output += line('Move Speed: ' + str(guma['navigation']['move_speed']))
+    output += line('Sight: ' + str(guma['recon']['observer']['items'][0]['radius']))
     output += p('Metal Cost: ' + str(guma['build_metal_cost']))
-    output += p('')
 
-    output += p('Rate of fire: ' + str(guma_gun['rate_of_fire']))
-    output += p('Range: ' + str(guma_gun['max_range']))
-    output += p('Damage: ' + str(guma_ammo['damage']))
-    output += p('Splash radius: ' + str(guma_ammo.get('splash_radius', 'None')))
-    output += p('(Note: shots move (relatively slowly) at about ' + str(guma_ammo['initial_velocity']) + 'm/s which means how you move your Guma is important)')
+    output += line('Rate of fire: ' + str(guma_gun['rate_of_fire']))
+    output += line('Range: ' + str(guma_gun['max_range']))
+    output += line('Damage: ' + str(guma_ammo['damage']))
+    output += line('Splash radius: ' + str(guma_ammo.get('splash_radius', 'None')))
+    output += line('(Note: shots move (relatively slowly) at about ' + str(guma_ammo['initial_velocity']) + 'm/s which means how you move your Guma is important)')
     output += p('')
 
     return output
@@ -106,38 +105,34 @@ def output_kuma():
     love_gun = load(unit_list['kuma_love_gun'])
     love_ammo = load(unit_list['kuma_love_ammo'])
 
-    output += h4(kuma['display_name'] + ' (Commander)')
+    output += h3(kuma['display_name'] + ' (Commander)')
     output += p('Your leader! A fearless Kuma!')
-    output += p('')
 
-    output += p('Health: ' + str(kuma['max_health']))
-    output += p('Move Speed: ' + str(kuma['navigation']['move_speed']))
-    output += p('Sight: ' + str(kuma['recon']['observer']['items'][0]['radius']))
+    output += line('Health: ' + str(kuma['max_health']))
+    output += line('Move Speed: ' + str(kuma['navigation']['move_speed']))
+    output += line('Sight: ' + str(kuma['recon']['observer']['items'][0]['radius']))
     output += p('Metal Cost: ' + str(kuma['build_metal_cost']))
 
-    output += p('')
-    output += p('Economy:')
-    output += p('  Storage: Metal: ' + str(kuma['storage']['metal']) + ' Energy: ' + str(kuma['storage']['energy']))
-    output += p('  Production: Metal: ' + str(kuma['production']['metal']) + ' Energy: ' + str(kuma['production']['energy']))
-    output += p('  Build Arm: Metal: ' + str(kuma_build['construction_demand']['metal']) + ' Energy: ' + str(kuma_build['construction_demand']['energy']))
-    output += p("  (Commander builds pretty quick! And doesn't use much power)")
-    output += p('')
+    output += h4('Economy:')
+    output += line('  Storage: Metal: ' + str(kuma['storage']['metal']) + ' Energy: ' + str(kuma['storage']['energy']))
+    output += line('  Production: Metal: ' + str(kuma['production']['metal']) + ' Energy: ' + str(kuma['production']['energy']))
+    output += line('  Build Arm: Metal: ' + str(kuma_build['construction_demand']['metal']) + ' Energy: ' + str(kuma_build['construction_demand']['energy']))
+    output += line("  (Commander builds pretty quick! And doesn't use much power)")
 
-    output += p('Main Weapon:')
-    output += p('  Rate of fire: ' + str(kuma_gun['rate_of_fire']))
-    output += p('  Range: ' + str(kuma_gun['max_range']))
-    output += p('  Damage: ' + str(kuma_ammo['damage']))
-    output += p('  Splash damage: ' + str(kuma_ammo.get('splash_damage', 'None')))
-    output += p('  Splash radius: ' + str(kuma_ammo.get('splash_radius', 'None')))
-    output += p('')
+    output += h4('Main Weapon:')
+    output += line('  Rate of fire: ' + str(kuma_gun['rate_of_fire']))
+    output += line('  Range: ' + str(kuma_gun['max_range']))
+    output += line('  Damage: ' + str(kuma_ammo['damage']))
+    output += line('  Splash damage: ' + str(kuma_ammo.get('splash_damage', 'None')))
+    output += line('  Splash radius: ' + str(kuma_ammo.get('splash_radius', 'None')))
 
-    output += p('Love Gun (commander alt-fire):')
-    output += p('  Range: ' + str(love_gun['max_range']))
-    output += p('  Damage: ' + str(love_ammo['damage']) + ' (x' + str(love_ammo.get('armor_damage_map', {}).get('AT_Commander', 1)) + ' damage to other Kuma!)')
-    output += p('  Splash damage: ' + str(love_ammo.get('splash_damage', 'None')))
-    output += p('  Splash radius: ' + str(love_ammo.get('splash_radius', 'None')))
-    output += p('  (Huge radius, kill those pesky Guma globs!)')
-    output += p('  Can only fire once every ' + str(round(1.0 / love_gun['rate_of_fire'])) + ' seconds. Needs energy to recharge')
+    output += h4('Love Gun (commander alt-fire):')
+    output += line('  Range: ' + str(love_gun['max_range']))
+    output += line('  Damage: ' + str(love_ammo['damage']) + ' (x' + str(love_ammo.get('armor_damage_map', {}).get('AT_Commander', 1)) + ' damage to other Kuma!)')
+    output += line('  Splash damage: ' + str(love_ammo.get('splash_damage', 'None')))
+    output += line('  Splash radius: ' + str(love_ammo.get('splash_radius', 'None')))
+    output += line('  (Huge radius, kill those pesky Guma globs!)')
+    output += line('  Can only fire once every ' + str(round(1.0 / love_gun['rate_of_fire'])) + ' seconds. Needs energy to recharge')
     output += p('')
 
     return output
@@ -148,15 +143,15 @@ def output_honey_flower():
     fab_bot = load(unit_list['fab_bot'])
     fab_bot_arm = load(unit_list['fab_bot_arm'])
 
-    output += h4(fab_bot['display_name'])
+    output += h3(fab_bot['display_name'])
     output += p('Slowly repairs nearby buildings and units.')
-    output += p('')
-    output += p('Health: ' + str(fab_bot['max_health']))
-    output += p('Move Speed: ' + str(fab_bot['navigation']['move_speed']))
-    output += p('Sight: ' + str(fab_bot['recon']['observer']['items'][0]['radius']))
+    
+    output += line('Health: ' + str(fab_bot['max_health']))
+    output += line('Move Speed: ' + str(fab_bot['navigation']['move_speed']))
+    output += line('Sight: ' + str(fab_bot['recon']['observer']['items'][0]['radius']))
     output += p('Metal Cost: ' + str(fab_bot['build_metal_cost']))
-    output += p('')
-    output += p('Repair Arm: Metal: ' + str(fab_bot_arm['construction_demand']['metal']) + ' Energy: ' + str(fab_bot_arm['construction_demand']['energy']))
+    
+    output += line('Repair Arm: Metal: ' + str(fab_bot_arm['construction_demand']['metal']) + ' Energy: ' + str(fab_bot_arm['construction_demand']['energy']))
     output += p('')
 
     return output
@@ -167,15 +162,15 @@ def output_school():
     bot_fac = load(unit_list['bot_fac'])
     bot_fac_arm = load(unit_list['bot_fac_arm'])
 
-    output += h4(bot_fac['display_name'])
+    output += h3(bot_fac['display_name'])
     output += p('Guma training facility! Let your guma spread your True Love Regime!')
-    output += p('')
-    output += p('Health: ' + str(bot_fac['max_health']))
+    
+    output += line('Health: ' + str(bot_fac['max_health']))
     output += p('Metal Cost: ' + str(bot_fac['build_metal_cost']))
-    output += p('')
-    output += p('Build Arm: Metal: ' + str(bot_fac_arm['construction_demand']['metal']) + ' Energy: ' + str(bot_fac_arm['construction_demand']['energy']))
-    output += p('Roll off time: 1 second')
-    output += p('(Over time the factory consumes 1 metal and 1 power each second when training guma)')
+    
+    output += line('Build Arm: Metal: ' + str(bot_fac_arm['construction_demand']['metal']) + ' Energy: ' + str(bot_fac_arm['construction_demand']['energy']))
+    output += line('Roll off time: 1 second')
+    output += line('(Over time the factory consumes 1 metal and 1 power each second when training guma)')
     output += p('')
 
     return output
@@ -186,16 +181,17 @@ def output_eco():
     pgen = load(unit_list['pgen'])
     mex = load(unit_list['mex'])
 
-    output += h4(pgen['display_name'])
-    output += p('Health: ' + str(pgen['max_health']))
-    output += p('Metal Cost: ' + str(pgen['build_metal_cost']))
-    output += p('Production: Energy: ' + str(pgen['production'].get('energy', 'None')))
+    output += h3(pgen['display_name'])
+    output += line('Health: ' + str(pgen['max_health']))
+    output += line('Metal Cost: ' + str(pgen['build_metal_cost']))
+    output += line('Production: Energy: ' + str(pgen['production'].get('energy', 'None')))
     output += p('')
 
-    output += h4(mex['display_name'])
-    output += p('Health: ' + str(mex['max_health']))
-    output += p('Metal Cost: ' + str(mex['build_metal_cost']))
-    output += p('Production: Metal: ' + str(mex['production'].get('metal', 'None')))
+
+    output += h3(mex['display_name'])
+    output += line('Health: ' + str(mex['max_health']))
+    output += line('Metal Cost: ' + str(mex['build_metal_cost']))
+    output += line('Production: Metal: ' + str(mex['production'].get('metal', 'None')))
     output += p('')
 
     return output
@@ -205,25 +201,26 @@ def output_radar():
 
     radar = load(unit_list['radar'])
 
-    output += h4(radar['display_name'])
+    output += h3(radar['display_name'])
     output += p('Detects frenemy units and buildings!')
+    
+    output += line('Health: ' + str(radar['max_health']))
+    output += line('Metal Cost: ' + str(radar['build_metal_cost']))
+    output += line('Sight Range: ' + str(radar['recon']['observer']['items'][0]['radius']))
+    output += line('Radar Range: ' + str(radar['recon']['observer']['items'][1]['radius']))
+    output += line('Energy Consumption: None')
+    output += line('(The radar still deactivates when there is no power though, so be careful!)')
     output += p('')
-    output += p('Health: ' + str(radar['max_health']))
-    output += p('Metal Cost: ' + str(radar['build_metal_cost']))
-    output += p('Sight Range: ' + str(radar['recon']['observer']['items'][0]['radius']))
-    output += p('Radar Range: ' + str(radar['recon']['observer']['items'][1]['radius']))
-    output += p('Energy Consumption: None')
-    output += p('(The radar still deactivates when there is no power though, so be careful!)')
 
     return output    
 
-output += h3('Units')
+output += h2('Units')
 output += output_kuma()
 output += output_guma()
 output += output_honey_flower()
 
 # output += h3('Economy')
-output += h3('Buildings')
+output += h2('Buildings')
 output += output_eco()
 output += output_school()
 output += output_radar()
