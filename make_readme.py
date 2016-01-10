@@ -42,7 +42,7 @@ def h4(str):
     if mode == 'md': return '####' + str + '\n'
     
 def p(str):
-    if mode == 'md': return str + '\n'
+    if mode == 'md': return str + '\n\n'
 
 def line(str):
     if mode == 'md': return str + '  \n'
