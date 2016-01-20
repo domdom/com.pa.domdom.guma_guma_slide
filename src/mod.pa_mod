@@ -11,7 +11,7 @@
         "display_name" : "Guma Guma Slide",
         "description" : "A fast paced custom game bringing PA to life with rainbows and beams of love!",
         "author" : "Yuri Bros",
-        "version" : "1.5.1",
+        "version" : "1.5.2",
         "forum": "https://forums.uberent.com/threads/rel-guma-guma-slide.67174/",
         "category": [
             "server-mod",
@@ -144,6 +144,7 @@
             ]
         },
         { "from_file" : "commanders.pa_patch" },
+        { "from_script" : "unit_list.py" },
         {
             "target" : "/pa/units/land/fabrication_bot_combat/fabrication_bot_combat_build_arm.json",
             "patch" : [
