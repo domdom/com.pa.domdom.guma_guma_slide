@@ -45,7 +45,7 @@ def p(str):
     if mode == 'md': return str + '\n\n'
 
 def line(str):
-    if mode == 'md': return str + '\n'
+    if mode == 'md': return str + '  \n'
 
 def a(name, link):
     if mode == 'md': return '(%s)[%s]' % (name, link)
