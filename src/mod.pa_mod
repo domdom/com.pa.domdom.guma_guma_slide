@@ -11,19 +11,13 @@
         "display_name" : "Guma Guma Slide",
         "description" : "A fast paced custom game bringing PA to life with rainbows and beams of love!",
         "author" : "Yuri Bros",
-        "version" : "1.5.2",
+        "version" : "1.5.3",
         "forum": "https://forums.uberent.com/threads/rel-guma-guma-slide.67174/",
         "category": [
-            "server-mod",
             "units",
-            "game-mode"
+            "gameplay"
         ],
-        "product": [
-            "Titans",
-            "Classic"
-        ],
-        "icon": "http://i.imgur.com/Ru0njgV.jpg",
-        "priority": 500
+        "icon": "http://i.imgur.com/Ru0njgV.jpg"
     },
     "mod" : [
         {"target" : "/ui/main/shared/js/build.js"},
@@ -138,6 +132,7 @@
         {
             "target" : [
                 "/pa/effects/specs/rainbow_commander_landing.pfx",
+                "/pa/effects/specs/rainbow_commander_explosion.pfx",
                 "/pa/effects/specs/uber_proj_explosion.pfx",
                 "/pa/effects/specs/uber_proj_trail.pfx",
                 "/pa/units/land/assault_bot/laser_trail.pfx"
@@ -177,6 +172,12 @@
             "target" : "/pa/effects/specs/default_commander_landing_ent.json",
             "patch" : [
                 {"op" : "replace", "path" : "/spawn_response/effect_spec", "value" : "/pa/effects/specs/rainbow_commander_landing.pfx"}
+            ]
+        },
+        {
+            "target": "/pa/effects/specs/default_commander_explosion_ent.json",
+            "patch" : [
+                {"op" : "replace", "path" : "/spawn_response/effect_spec", "value" : "/pa/effects/specs/rainbow_commander_explosion.pfx"}
             ]
         }
     ]

@@ -31,8 +31,9 @@
     "metal": 125
   },
   "unit_types": [
-    "UNITTYPE_Mobile",
     "UNITTYPE_Commander",
+    "UNITTYPE_Construction",
+    "UNITTYPE_Mobile",
     "UNITTYPE_Offense",
     "UNITTYPE_Land",
     "UNITTYPE_NoBuild"
@@ -56,11 +57,25 @@
     "acceleration": -1,
     "brake": -1,
     "move_speed": 45,
-    "turn_speed": 720
+    "turn_speed": 720,
+    "turn_in_place": false,
+    "park_stamp": {
+      "shape": "sphere",
+      "cost": 20,
+      "type_data": [
+        {
+          "move_type": "land-small",
+          "stamp_type": "simple"
+        },
+        {
+          "move_type": "amphibious",
+          "stamp_type": "simple"
+        }
+      ]
+    }
   },
   "physics": {
     "radius": 9,
-    "push_class": 100,
     "sync_radius_to_extents": true
   },
   "recon": {
@@ -68,6 +83,12 @@
       "items": [
         {
           "layer": "surface_and_air",
+          "channel": "sight",
+          "shape": "capsule",
+          "radius": 200
+        },
+        {
+          "layer": "underwater",
           "channel": "sight",
           "shape": "capsule",
           "radius": 200
@@ -147,17 +168,17 @@
         "flag": "build_target_changed",
         "should_start_func": "has_build_target",
         "should_stop_func": "no_build_target"
-      },
-      "move": {
-        "cue": "/SE/Movement/commander/Commander_move_loop",
-        "flag": "vel_changed",
-        "should_start_func": "is_moving",
-        "should_stop_func": "is_not_moving"
       }
     },
     "selection_response": {
       "cue": "/SE/Selection/commander"
+    },
+    "sing_selection_response": {
+      "cue": "/SE/UI/plus/sing"
     }
+  },
+  "selection_icon": {
+    "diameter": 16.6
   },
   "mesh_bounds": [
     12.6,

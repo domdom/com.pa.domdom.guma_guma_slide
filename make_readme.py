@@ -26,7 +26,7 @@ unit_list = {
 
 def load(name):
     f = os.path.join(os.path.abspath('.'), os.path.normpath(name)[1:])
-    print f
+    print(f)
     return json.load(open(f))
 
 def h1(str):
@@ -45,7 +45,7 @@ def p(str):
     if mode == 'md': return str + '\n\n'
 
 def line(str):
-    if mode == 'md': return str + '  \n'
+    if mode == 'md': return str + '\n'
 
 def a(name, link):
     if mode == 'md': return '(%s)[%s]' % (name, link)
@@ -54,11 +54,11 @@ output += h1('Guma Guma Slide!')
 output += p('A fast paced custom game bringing PA to life with rainbows and beams of love!')
 
 output += h2('What is Guma Guma Slide?')
-output += p('Getting tired of the same old grind in PA? Well have I got a change of pace for you! \
+output += p('''Getting tired of the same old grind in PA? Well have I got a change of pace for you! \
 Guma Guma Slide is an exciting, chaotic mod that will have your hands sweating and your heart pumping.\n\n\
-Your commander will die in an instant so don\'t take your eyes off of it for too long. Out micro your opponents \
+Your commander will die in an instant so don't take your eyes off of it for too long. Out micro your opponents \
 and lead your horde of Guma to victory. And did I mention the beautiful sparkling rainbow effects? Now you can pwn \
-noobs in style with your rainbow bubble and rainbow trail. What more could you want!!?')
+noobs in style with your rainbow bubble and rainbow trail. What more could you want!!?''')
 
 output += h2('Is there lore? Oh yes!')
 output += p('''Some time ago, the asteroid Kumaria exploded in the depths of space.
@@ -132,7 +132,7 @@ def output_kuma():
     output += line('  Splash damage: ' + str(love_ammo.get('splash_damage', 'None')))
     output += line('  Splash radius: ' + str(love_ammo.get('splash_radius', 'None')))
     output += line('  (Huge radius, kill those pesky Guma globs!)')
-    output += line('  Can only fire once every ' + str(round(1.0 / love_gun['rate_of_fire'])) + ' seconds. Needs energy to recharge')
+    output += line('  Can only fire once every ' + str(round(1.0 / love_gun['rate_of_fire'])) + ' seconds. Needs energy to recharge.')
     output += p('')
 
     return output
@@ -225,6 +225,6 @@ output += output_eco()
 output += output_school()
 output += output_radar()
 
-open('readme.md', 'w').write(output)
+open('README.md', 'w').write(output)
 
-print output
+print(output)

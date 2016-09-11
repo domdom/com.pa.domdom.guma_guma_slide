@@ -14,6 +14,8 @@
             {"op" : "replace", "path" : "/storage/energy", "value" : 50},
             {"op" : "replace", "path" : "/storage/metal", "value" : 125},
 
+            {"op" : "replace", "path" : "/recon/observer/items/0/radius", "value" : 200},
+            {"op" : "replace", "path" : "/recon/observer/items/1/radius", "value" : 200},
             {"op" : "replace", "path" : "/tools", "value" : [
                 {
                   "spec_id": "/pa/tools/commander_build_arm/commander_build_arm.json",
