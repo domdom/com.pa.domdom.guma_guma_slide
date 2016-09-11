@@ -1,4 +1,4 @@
 src export-ignore
-make.py export-ignore
+*.py export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
