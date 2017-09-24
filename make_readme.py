@@ -30,17 +30,17 @@ def load(name):
     return json.load(open(f))
 
 def h1(str):
-    if mode == 'md': return '#' + str + '\n'
+    if mode == 'md': return '# ' + str + '\n'
 
 def h2(str):
-    if mode == 'md': return '##' + str + '\n'
+    if mode == 'md': return '## ' + str + '\n'
 
 def h3(str):
-    if mode == 'md': return '###' + str + '\n'
+    if mode == 'md': return '### ' + str + '\n'
 
 def h4(str):
-    if mode == 'md': return '####' + str + '\n'
-    
+    if mode == 'md': return '#### ' + str + '\n'
+
 def p(str):
     if mode == 'md': return str + '\n\n'
 
@@ -145,12 +145,12 @@ def output_honey_flower():
 
     output += h3(fab_bot['display_name'])
     output += p('Slowly repairs nearby buildings and units.')
-    
+
     output += line('Health: ' + str(fab_bot['max_health']))
     output += line('Move Speed: ' + str(fab_bot['navigation']['move_speed']))
     output += line('Sight: ' + str(fab_bot['recon']['observer']['items'][0]['radius']))
     output += p('Metal Cost: ' + str(fab_bot['build_metal_cost']))
-    
+
     output += line('Repair Arm: Metal: ' + str(fab_bot_arm['construction_demand']['metal']) + ' Energy: ' + str(fab_bot_arm['construction_demand']['energy']))
     output += p('')
 
@@ -164,10 +164,10 @@ def output_school():
 
     output += h3(bot_fac['display_name'])
     output += p('Guma training facility! Let your guma spread your True Love Regime!')
-    
+
     output += line('Health: ' + str(bot_fac['max_health']))
     output += p('Metal Cost: ' + str(bot_fac['build_metal_cost']))
-    
+
     output += line('Build Arm: Metal: ' + str(bot_fac_arm['construction_demand']['metal']) + ' Energy: ' + str(bot_fac_arm['construction_demand']['energy']))
     output += line('Roll off time: 1 second')
     output += line('(Over time the factory consumes 1 metal and 1 power each second when training guma)')
@@ -203,7 +203,7 @@ def output_radar():
 
     output += h3(radar['display_name'])
     output += p('Detects frenemy units and buildings!')
-    
+
     output += line('Health: ' + str(radar['max_health']))
     output += line('Metal Cost: ' + str(radar['build_metal_cost']))
     output += line('Sight Range: ' + str(radar['recon']['observer']['items'][0]['radius']))
@@ -212,7 +212,7 @@ def output_radar():
     output += line('(The radar still deactivates when there is no power though, so be careful!)')
     output += p('')
 
-    return output    
+    return output
 
 output += h2('Units')
 output += output_kuma()
